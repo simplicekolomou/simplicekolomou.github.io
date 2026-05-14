@@ -1,0 +1,16 @@
+{
+  "projets": [
+    {
+      "titre": "Projet 1",
+      "slug": "projet-1",
+      "description": "Description du projet 1.",
+      "technos": ["React", "Node.js"]
+    },
+    {
+      "titre": "Projet 2",
+      "slug": "projet-2",
+      "description": "Description du projet 2.",
+      "technos": ["Vue.js", "Django"]
+    }
+  ]
+}
