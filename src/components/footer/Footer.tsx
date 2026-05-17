@@ -88,7 +88,7 @@ export default function Footer() {
                         &copy; {currentYear} Simplice Kolomou. Tous droits réservés.
                     </p>
                     <p className="flex items-center gap-1">
-                        Fait avec <Heart className="h-3 w-3 text-red-500 fill-current" /> en France
+                        Fait avec <Heart className="h-3 w-3 text-red-500 fill-current" /> à Liège, Belgique.
                     </p>
                 </div>
             </div>
