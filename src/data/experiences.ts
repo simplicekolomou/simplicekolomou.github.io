@@ -1,4 +1,4 @@
-import {Technology} from "@/src/data/projects";
+import {Technology} from "@/data/projects";
 
 interface Experience {
     id: string;
