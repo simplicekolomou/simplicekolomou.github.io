@@ -1,4 +1,4 @@
-name: Deploy Next.js site to Pages
+name: Deploy my base app
 
 on:
   push:
@@ -48,6 +48,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Deploy to GitHub Pages
+      - name: Deploy my base app
         id: deployment
         uses: actions/deploy-pages@v4
