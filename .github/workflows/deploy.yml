@@ -3,6 +3,7 @@ name: Deploy Next.js site to Pages
 on:
   push:
     branches: ["main"]
+  workflow_dispatch:   # (optionnel) déclenchement manuel
 
 # Permet au job de déploiement d'avoir les droits nécessaires
 permissions:
