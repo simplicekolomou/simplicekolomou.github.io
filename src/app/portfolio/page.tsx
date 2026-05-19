@@ -12,6 +12,8 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faCode} from "@fortawesome/free-solid-svg-icons";
 
 export default function PortfolioPage() {
     return (
@@ -93,7 +95,7 @@ export default function PortfolioPage() {
                                             rel="noopener noreferrer"
                                             className="flex items-center gap-1"
                                         >
-                                            <Mail className="h-4 w-4" />
+                                            <FontAwesomeIcon icon={faCode} className="h-4 w-4" />
                                             Code
                                         </Link>
                                     </Button>

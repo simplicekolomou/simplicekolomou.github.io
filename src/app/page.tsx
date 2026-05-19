@@ -31,7 +31,7 @@ export default function HomePage() {
         <Card className="w-full max-w-4xl mx-auto my-12 overflow-hidden border-0 shadow-2xl bg-gradient-to-br from-background via-background to-muted/20 rounded-3xl transition-all duration-300 hover:shadow-2xl">
             {/* Bandeau décoratif avec dégradé animé */}
             <div className="relative h-32 bg-gradient-to-r from-primary/40 via-primary/20 to-transparent overflow-hidden">
-                <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg...')] opacity-10" /> {/* Optionnel: pattern */}
+                <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg...')] opacity-10" />
             </div>
 
             <CardHeader className="relative px-8 pt-0 pb-2">

@@ -43,6 +43,7 @@ const techs = {
     laravel: { id: "laravel", name: "Laravel", icon: "/icons/laravel.png" },
     php: { id: "php", name: "PHP", icon: "/icons/php.png" },
     git: { id: "git", name: "Git", icon: "/icons/git.png" },
+    postgresql: { id: "postgresql", name: "PostgreSQL", icon: "/icons/postgresql.png" },
 };
 
 export const projects: Project[] = [
@@ -54,9 +55,9 @@ export const projects: Project[] = [
         techs: [techs.springBoot, techs.react, techs.typescript, techs.rtkQuery, techs.hibernate, techs.gradle, techs.git],
         slug: "bookexchange",
         date: "2025-12",
-        githubUrl: "https://github.com/simplicekolomou/bookexchange", // à remplacer par votre vrai dépôt
+        githubUrl: "https://github.com/simplicekolomou/bookexchange-front", // à remplacer par votre vrai dépôt
         demo: "https://www.loom.com/share/pert-demo",
-        image: "/projects/bookexchange.jpg",
+        image: "/Bookexchange-home.png",
     },
     {
         id: "meet-me-at",
@@ -68,7 +69,7 @@ export const projects: Project[] = [
         date: "2024-12",
         githubUrl: "https://github.com/simplicekolomou/meet-me-at",
         demo: "https://www.loom.com/share/pert-demo",
-        image: "/projects/meetmeat.jpg",
+        image: "/mma-presentation.png",
     },
     {
         id: "gestion-repas",
@@ -80,7 +81,31 @@ export const projects: Project[] = [
         date: "2025-06",
         githubUrl: "https://github.com/simplicekolomou/gestion-repas",
         demo: "https://www.loom.com/share/pert-demo",
-        image: "/projects/gestionrepas.jpg",
+        image: "/Gestion-repas-presentation.png",
+    },
+    {
+        id: "puorquamru",
+        title: "Puorquamru",
+        description:
+            "Plateforme E-learning full-stack : interface étudiant/enseignant, CRUD leçons/exercices, publication/masquage de leçon. Authentification par rôles, suivi de progression, validation serveur. Réalisé avec ASP.NET Core, Entity Framework, SQL Server, Razor Pages.",
+        techs: [techs.aspnet, techs.entityFramework, techs.postgresql, techs.razorPages, techs.git],
+        slug: "puorquamru",
+        date: "2024-06",
+        githubUrl: "https://github.com/simplicekolomou/puorquamru",
+        demo: "https://www.loom.com/share/pert-demo",
+        image: "/puroguramu-presentation.png",
+    },
+    /*{
+        id: "salto-coact",
+        title: "Salto CoAct",
+        description:
+            "Application de gestion de tâches collaborative. Frontend Angular/TypeScript avec composants réutilisables. Backend Laravel (API REST). Travail en équipe de 5 personnes, méthodologie agile, Git.",
+        techs: [techs.angular, techs.laravel, techs.php, techs.typescript, techs.git],
+        slug: "salto-coact",
+        date: "2023",
+        githubUrl: "https://github.com/simplicekolomou/salto-coact",
+        demo: "https://www.loom.com/share/pert-demo",
+        image: "/projects/saltocoact.jpg",
     },
     {
         id: "generateur-pert",
@@ -93,29 +118,5 @@ export const projects: Project[] = [
         githubUrl: "https://github.com/simplicekolomou/generateur-pert",
         demo: "https://www.loom.com/share/pert-demo",
         image: "/projects/pert.jpg",
-    },
-    {
-        id: "puorquamru",
-        title: "Puorquamru",
-        description:
-            "Plateforme E-learning full-stack : interface étudiant/enseignant, CRUD leçons/exercices, publication/masquage de leçon. Authentification par rôles, suivi de progression, validation serveur. Réalisé avec ASP.NET Core, Entity Framework, SQL Server, Razor Pages.",
-        techs: [techs.aspnet, techs.entityFramework, techs.sqlServer, techs.razorPages, techs.git],
-        slug: "puorquamru",
-        date: "2024-06",
-        githubUrl: "https://github.com/simplicekolomou/puorquamru",
-        demo: "https://www.loom.com/share/pert-demo",
-        image: "/projects/puorquamru.jpg",
-    },
-    {
-        id: "salto-coact",
-        title: "Salto CoAct",
-        description:
-            "Application de gestion de tâches collaborative. Frontend Angular/TypeScript avec composants réutilisables. Backend Laravel (API REST). Travail en équipe de 5 personnes, méthodologie agile, Git.",
-        techs: [techs.angular, techs.laravel, techs.php, techs.typescript, techs.git],
-        slug: "salto-coact",
-        date: "2023",
-        githubUrl: "https://github.com/simplicekolomou/salto-coact",
-        demo: "https://www.loom.com/share/pert-demo",
-        image: "/projects/saltocoact.jpg",
-    },
+    }*/
 ];

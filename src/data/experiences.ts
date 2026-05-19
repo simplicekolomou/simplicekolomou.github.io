@@ -1,4 +1,4 @@
-import {Technology} from "@/data/projects";
+import { Technology } from "@/data/projects";
 
 interface Experience {
     id: string;
@@ -7,36 +7,37 @@ interface Experience {
     startDate: string; // Format YYYY-MM
     endDate: string | null; // null si en cours
     description: string;
-    technologies: Technology[]; // Liste des technologies utilisées
+    technologies: Technology[];
 }
 
-const experiences: Experience[] = [
+// Définition des technologies utilisées dans les expériences
+const techs = {
+    postgresql: { id: "postgresql", name: "PostgreSQL", icon: "/icons/postgresql.png" },
+    mysql: { id: "mysql", name: "MySQL", icon: "/icons/mysql.png" },
+    windows: { id: "windows", name: "Windows", icon: "/icons/windows.png" },
+    reseau: { id: "reseau", name: "Réseau local", icon: "/icons/network.png" },
+    support: { id: "support", name: "Support technique", icon: "/icons/support.png" },
+};
+
+export const experiences: Experience[] = [
     {
-        id: "1",
-        title: "Développeur Frontend",
-        company: "Tech Solutions",
-        startDate: "2022-01",
-        endDate: null,
-        description: "Développement d'interfaces utilisateur pour des applications web en utilisant React et Next.js.",
-        technologies: [
-            { id: "1", name: "React", icon: "/icons/react.png" },
-            { id: "2", name: "Next.js", icon: "/icons/nextjs.png" },
-            { id: "3", name: "TypeScript", icon: "/icons/typescript.png" },
-        ],
+        id: "admin-bdd",
+        title: "Administrateur BDD & Responsable scolarité",
+        company: "Université Ahmadou Dieng (Conakry)",
+        startDate: "2014-01",
+        endDate: "2021-12",
+        description:
+            "Gestion et maintenance de la base de données institutionnelle (PostgreSQL, MySQL). Automatisation des inscriptions : réduction des erreurs et des délais de traitement. Supervision d'une équipe de 2 agents et coordination avec la DSI.",
+        technologies: [techs.postgresql, techs.mysql],
     },
     {
-        id: "2",
-        title: "Stagiaire Développeur Web",
-        company: "Web Innovators",
-        startDate: "2021-06",
-        endDate: "2021-12",
-        description: "Participation au développement de fonctionnalités pour une application de gestion",
-        technologies: [
-            { id: "4", name: "Vue.js", icon: "/icons/vue.png" },
-            { id: "5", name: "JavaScript", icon: "/icons/javascript.png" },
-            { id: "6", name: "CSS", icon: "/icons/css.png" },
-        ],
-    }
+        id: "assistant-info",
+        title: "Assistant informatique",
+        company: "Université Ahmadou Dieng (Conakry)",
+        startDate: "2012-01", // date approximative (avant 2014)
+        endDate: "2013-12",
+        description:
+            "Maintenance du parc informatique et gestion du réseau local. Support technique aux utilisateurs et déploiement de solutions logicielles.",
+        technologies: [techs.windows, techs.reseau, techs.support],
+    },
 ];
-
-export { experiences };

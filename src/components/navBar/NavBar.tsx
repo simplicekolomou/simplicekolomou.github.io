@@ -11,6 +11,7 @@ const navLinks = [
     { href: "/", label: "À propos" },
     { href: "/skills", label: "Compétences" },
     { href: "/portfolio", label: "Projets" },
+    { href: "/experiences", label: "Expériences" },
     { href: "/contacts", label: "Contact" },
 ];
 
@@ -52,13 +53,9 @@ export default function NavBar() {
                 <div className="flex h-16 items-center justify-between">
                     {/* Logo / identité */}
                     <Link href="/" className="flex items-center space-x-2">
-            <span className="text-xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-              Simplice Kolomou
-            </span>
-                        <span className="hidden sm:inline-block w-1.5 h-1.5 rounded-full bg-primary" />
-                        <span className="hidden sm:inline text-sm font-medium text-muted-foreground">
-              Dev Full-Stack
-            </span>
+                        <span className="text-xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+                          Simplice Kolomou
+                        </span>
                     </Link>
 
                     {/* Navigation desktop */}
