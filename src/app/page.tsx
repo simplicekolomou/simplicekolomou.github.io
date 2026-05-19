@@ -37,7 +37,7 @@ export default function HomePage() {
             <CardHeader className="relative px-8 pt-0 pb-2">
                 <div className="flex flex-col sm:flex-row items-center sm:items-end gap-4 -mt-12 sm:-mt-10 mb-2">
                     <Avatar className="w-28 h-28 border-4 border-background shadow-xl ring-2 ring-primary/20">
-                        <AvatarImage src="/avatar.jpg" alt="Photo de profil" />
+                        <AvatarImage src="/photo-profil.jpg" alt="Photo de profil" />
                         <AvatarFallback className="bg-gradient-to-br from-primary/20 to-primary/5 text-primary text-2xl font-bold">
                             SK
                         </AvatarFallback>
