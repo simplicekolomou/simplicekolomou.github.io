@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { projects } from "@/data/projects";
-import {ExternalLink, Calendar, FolderGit2, Mail} from "lucide-react";
+import {ExternalLink, Calendar, FolderGit2} from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -87,18 +87,45 @@ export default function PortfolioPage() {
                                 )}
                             </CardContent>
                             <CardFooter className="flex justify-between gap-2 pt-2 border-t">
-                                {project.githubUrl && (
-                                    <Button variant="outline" size="sm" asChild>
-                                        <Link
-                                            href={project.githubUrl}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="flex items-center gap-1"
-                                        >
-                                            <FontAwesomeIcon icon={faCode} className="h-4 w-4" />
-                                            Code
-                                        </Link>
-                                    </Button>
+                                {project.repos && (
+                                    project.repos.length > 1 ? (
+                                        <div className="flex gap-2">
+                                            <Button variant="outline" size="sm" asChild>
+                                                <Link
+                                                    href={project.repos[0]}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="flex items-center gap-1"
+                                                >
+                                                    <FontAwesomeIcon icon={faCode} className="h-4 w-4" />
+                                                    Repository Frontend
+                                                </Link>
+                                            </Button>
+                                            <Button variant="outline" size="sm" asChild>
+                                            <Link
+                                                href={project.repos[1]}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="flex items-center gap-1"
+                                                >
+                                                    <FontAwesomeIcon icon={faCode} className="h-4 w-4" />
+                                                Repository Backend
+                                                </Link>
+                                            </Button>
+                                        </div>
+                                    ):(
+                                        <Button variant="outline" size="sm" asChild>
+                                            <Link
+                                                href={project.repos[0]}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="flex items-center gap-1"
+                                            >
+                                                <FontAwesomeIcon icon={faCode} className="h-4 w-4" />
+                                                Repository
+                                            </Link>
+                                        </Button>
+                                    )
                                 )}
                                 {project.demo && (
                                     <Button size="sm" asChild>
@@ -113,7 +140,7 @@ export default function PortfolioPage() {
                                         </Link>
                                     </Button>
                                 )}
-                                {!project.githubUrl && !project.demo && (
+                                {!project.repos && !project.demo && (
                                     <div className="flex items-center text-muted-foreground text-sm">
                                         <FolderGit2 className="h-4 w-4 mr-1" />
                                         Détails disponibles

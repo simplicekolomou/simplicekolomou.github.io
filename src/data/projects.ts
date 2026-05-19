@@ -1,3 +1,4 @@
+import { techs } from "./technology";
 export interface Technology {
     id: string;
     name: string;
@@ -12,39 +13,9 @@ export interface Project {
     slug: string;
     image?: string;
     date?: string;
-    githubUrl?: string;
+    repos?: string[];
     demo?: string;
 }
-
-// Liste des technologies utilisées dans les projets (icônes à remplacer si besoin)
-const techs = {
-    java: { id: "java", name: "Java", icon: "/icons/java.png" },
-    springBoot: { id: "spring-boot", name: "Spring Boot", icon: "/icons/spring-boot.png" },
-    react: { id: "react", name: "React", icon: "/icons/react.png" },
-    typescript: { id: "typescript", name: "TypeScript", icon: "/icons/typescript.png" },
-    rtkQuery: { id: "rtk-query", name: "RTK Query", icon: "/icons/redux-toolkit.png" },
-    hibernate: { id: "hibernate", name: "Hibernate", icon: "/icons/hibernate.png" },
-    gradle: { id: "gradle", name: "Gradle", icon: "/icons/gradle.png" },
-    csharp: { id: "csharp", name: "C#", icon: "/icons/csharp.png" },
-    avalonia: { id: "avalonia", name: "Avalonia UI", icon: "/icons/avalonia.png" },
-    mysql: { id: "mysql", name: "MySQL", icon: "/icons/mysql.png" },
-    jdbc: { id: "jdbc", name: "JDBC", icon: "/icons/jdbc.png" },
-    kotlin: { id: "kotlin", name: "Kotlin", icon: "/icons/kotlin.png" },
-    android: { id: "android", name: "Android", icon: "/icons/android.png" },
-    mvvm: { id: "mvvm", name: "MVVM", icon: "/icons/mvvm.png" },
-    room: { id: "room", name: "Room", icon: "/icons/room.png" },
-    jgrapht: { id: "jgrapht", name: "JGraphT", icon: "/icons/jgrapht.png" },
-    junit: { id: "junit", name: "JUnit", icon: "/icons/junit.png" },
-    aspnet: { id: "aspnet", name: "ASP.NET Core", icon: "/icons/aspnet.png" },
-    entityFramework: { id: "entity-framework", name: "Entity Framework", icon: "/icons/entity-framework.png" },
-    sqlServer: { id: "sql-server", name: "SQL Server", icon: "/icons/sql-server.png" },
-    razorPages: { id: "razor-pages", name: "Razor Pages", icon: "/icons/razor.png" },
-    angular: { id: "angular", name: "Angular", icon: "/icons/angular.png" },
-    laravel: { id: "laravel", name: "Laravel", icon: "/icons/laravel.png" },
-    php: { id: "php", name: "PHP", icon: "/icons/php.png" },
-    git: { id: "git", name: "Git", icon: "/icons/git.png" },
-    postgresql: { id: "postgresql", name: "PostgreSQL", icon: "/icons/postgresql.png" },
-};
 
 export const projects: Project[] = [
     {
@@ -55,7 +26,7 @@ export const projects: Project[] = [
         techs: [techs.springBoot, techs.react, techs.typescript, techs.rtkQuery, techs.hibernate, techs.gradle, techs.git],
         slug: "bookexchange",
         date: "2025-12",
-        githubUrl: "https://github.com/simplicekolomou/bookexchange-front", // à remplacer par votre vrai dépôt
+        repos: ["https://github.com/simplicekolomou/bookexchange-front", "https://github.com/simplicekolomou/bookexchange-api"], // à remplacer par votre vrai dépôt
         demo: "https://www.loom.com/share/pert-demo",
         image: "/Bookexchange-home.png",
     },
@@ -67,7 +38,7 @@ export const projects: Project[] = [
         techs: [techs.java, techs.csharp, techs.avalonia, techs.mysql, techs.jdbc, techs.gradle, techs.git],
         slug: "meet-me-at",
         date: "2024-12",
-        githubUrl: "https://github.com/simplicekolomou/meet-me-at",
+        repos: ["https://github.com/simplicekolomou/mma-client", "https://github.com/simplicekolomou/mma.admin"],
         demo: "https://www.loom.com/share/pert-demo",
         image: "/mma-presentation.png",
     },
@@ -79,7 +50,7 @@ export const projects: Project[] = [
         techs: [techs.kotlin, techs.android, techs.mvvm, techs.room, techs.git],
         slug: "gestion-repas",
         date: "2025-06",
-        githubUrl: "https://github.com/simplicekolomou/gestion-repas",
+        repos: ["https://github.com/simplicekolomou/gestion-repas"],
         demo: "https://www.loom.com/share/pert-demo",
         image: "/Gestion-repas-presentation.png",
     },
@@ -91,32 +62,31 @@ export const projects: Project[] = [
         techs: [techs.aspnet, techs.entityFramework, techs.postgresql, techs.razorPages, techs.git],
         slug: "puorquamru",
         date: "2024-06",
-        githubUrl: "https://github.com/simplicekolomou/puorquamru",
+        repos: ["https://github.com/simplicekolomou/puorquamru"],
         demo: "https://www.loom.com/share/pert-demo",
         image: "/puroguramu-presentation.png",
     },
-    /*{
-        id: "salto-coact",
-        title: "Salto CoAct",
+    {
+        id: "my-portfolio",
+        title: "Mon Portfolio",
         description:
-            "Application de gestion de tâches collaborative. Frontend Angular/TypeScript avec composants réutilisables. Backend Laravel (API REST). Travail en équipe de 5 personnes, méthodologie agile, Git.",
-        techs: [techs.angular, techs.laravel, techs.php, techs.typescript, techs.git],
-        slug: "salto-coact",
-        date: "2023",
-        githubUrl: "https://github.com/simplicekolomou/salto-coact",
-        demo: "https://www.loom.com/share/pert-demo",
-        image: "/projects/saltocoact.jpg",
+            "Site portfolio personnel développé avec Next.js, TypeScript et Tailwind CSS. Présentation de mes projets, compétences et expériences. Design responsive avec animations subtiles pour une expérience utilisateur fluide.",
+        techs: [techs.react, techs.nextjs, techs.typescript, techs.tailwind, techs.git],
+        slug: "my-portfolio",
+        date: "2025-01",
+        image: "/portfolio-presentation.png",
+        repos: ["https://github.com/simplicekolomou/simplicekolomou.github.io"],
     },
     {
-        id: "generateur-pert",
-        title: "Générateur PERT",
+        id: "ticketing",
+        title: "Système de gestion de tickets",
         description:
-            "Générateur aléatoire de diagrammes PERT valides avec calcul du chemin critique et des dates début/fin. Utilisation de la bibliothèque JGraphT et tests unitaires JUnit.",
-        techs: [techs.java, techs.jgrapht, techs.junit, techs.git],
-        slug: "generateur-pert",
-        date: "2025-06",
-        githubUrl: "https://github.com/simplicekolomou/generateur-pert",
-        demo: "https://www.loom.com/share/pert-demo",
-        image: "/projects/pert.jpg",
-    }*/
+            "Application de gestion de tickets pour support client. Backend Java Spring Boot avec API REST, frontend React(NextJs) + TypeScript. Fonctionnalités : création/attribution de tickets, suivi de statut, notifications par email.",
+        techs: [techs.springBoot, techs.react, techs.typescript, techs.rtkQuery, techs.hibernate, techs.git, techs.nextjs, techs.postgresql],
+        slug: "ticketing",
+        date: "2026-03",
+        repos: ["https://github.com/simplicekolomou/syasko-tickecting-front","https://github.com/simplicekolomou/syasko-tickecting-api"],
+        demo: "https://syasko-tickecting-front-ea82sqbbk-simplice-kolomous-projects.vercel.app/",
+        image: "/ticketing-presentation.png",
+    }
 ];

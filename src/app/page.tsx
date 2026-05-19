@@ -13,20 +13,26 @@ import {
     ArrowRight
 } from "lucide-react";
 import Link from "next/link";
+import { techs } from "@/data/technology";
 
 export default function HomePage() {
-    // Données des compétences avec icônes (utilisation d'émojis ou de Lucide si dispo)
-    const techs = [
-        { name: "React", icon: "⚛️" },
-        { name: "Next.js", icon: "▲" },
-        { name: "TypeScript", icon: "📘" },
-        { name: "Tailwind CSS", icon: "🎨" },
-        { name: "Node.js", icon: "🟢" },
-        { name: "Java", icon: "☕" },
-        { name: "Spring Boot", icon: "🍃" },
-        { name: "Git", icon: "⎇" },
+    const myTechns = [
+        techs.java,
+        techs.springBoot,
+        techs.react,
+        techs.typescript,
+        techs.rtkQuery,
+        techs.hibernate,
+        techs.gradle,
+        techs.csharp,
+        techs.mysql,
+        techs.junit,
+        techs.aspnet,
+        techs.sqlServer,
+        techs.laravel,
+        techs.php,
+        techs.git
     ];
-
     return (
         <Card className="w-full max-w-4xl mx-auto my-12 overflow-hidden border-0 shadow-2xl bg-gradient-to-br from-background via-background to-muted/20 rounded-3xl transition-all duration-300 hover:shadow-2xl">
             {/* Bandeau décoratif avec dégradé animé */}
@@ -80,7 +86,7 @@ export default function HomePage() {
                         Stack technique
                     </h3>
                     <div className="flex flex-wrap gap-2">
-                        {techs.map((tech) => (
+                        {myTechns. map((tech) => (
                             <Badge
                                 key={tech.name}
                                 variant="secondary"

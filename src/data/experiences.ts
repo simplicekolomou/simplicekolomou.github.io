@@ -1,4 +1,5 @@
 import { Technology } from "@/data/projects";
+import { techs } from "./technology";
 
 interface Experience {
     id: string;
@@ -9,15 +10,6 @@ interface Experience {
     description: string;
     technologies: Technology[];
 }
-
-// Définition des technologies utilisées dans les expériences
-const techs = {
-    postgresql: { id: "postgresql", name: "PostgreSQL", icon: "/icons/postgresql.png" },
-    mysql: { id: "mysql", name: "MySQL", icon: "/icons/mysql.png" },
-    windows: { id: "windows", name: "Windows", icon: "/icons/windows.png" },
-    reseau: { id: "reseau", name: "Réseau local", icon: "/icons/network.png" },
-    support: { id: "support", name: "Support technique", icon: "/icons/support.png" },
-};
 
 export const experiences: Experience[] = [
     {
