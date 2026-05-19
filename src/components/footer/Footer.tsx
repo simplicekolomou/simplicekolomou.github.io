@@ -16,7 +16,7 @@ export default function Footer() {
                             Simplice Kolomou
                         </h3>
                         <p className="text-sm text-muted-foreground max-w-md">
-                            Développeur full-stack passionné par la création d&apos;applications web modernes,
+                            Développeur full-stack passionné par la création d&apos;applications modernes,
                             performantes et accessibles. Transformons vos idées en réalité numérique.
                         </p>
                     </div>
@@ -33,6 +33,11 @@ export default function Footer() {
                             <li>
                                 <Link href="/skills" className="text-muted-foreground hover:text-primary transition-colors">
                                     Compétences
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/experiences" className="text-muted-foreground hover:text-primary transition-colors">
+                                    Expériences
                                 </Link>
                             </li>
                             <li>

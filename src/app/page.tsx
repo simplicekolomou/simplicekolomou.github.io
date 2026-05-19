@@ -70,7 +70,7 @@ export default function HomePage() {
                 {/* Description avec mise en avant */}
                 <div className="prose prose-neutral dark:prose-invert max-w-none">
                     <p className="text-lg leading-relaxed">
-                        Passionné par le développement logiciel, je suis actuellement en <span className="font-semibold text-primary">3ème année de Bachelier en développement d&apos;applications</span> à la Haute École Libre Mosane (HELMo).
+                        Passionné par le développement logiciel, je suis actuellement en <span className="font-semibold text-primary">3ème année de Bachelier en développement d&apos;applications </span> à la Haute École Libre Mosane (HELMo).
                         J&apos;aime concevoir des solutions robustes et modernes, du backend aux interfaces utilisateur.
                     </p>
                     <p className="mt-3 text-muted-foreground">
@@ -109,7 +109,6 @@ export default function HomePage() {
                             <p className="text-sm font-semibold">Expérience</p>
                             <p className="text-sm text-muted-foreground">
                                 Expériences académiques & personnelles<br />
-                                (projets concrets, gestion BDD)
                             </p>
                         </div>
                     </div>
@@ -134,8 +133,8 @@ export default function HomePage() {
                         <div>
                             <p className="text-sm font-semibold">Passions</p>
                             <p className="text-sm text-muted-foreground">
-                                API REST, architectures propres,<br />
-                                UI/UX, musique (guitare)
+                                Nouvelles technologies, architectures logicielle,<br />
+                                musique (guitare)
                             </p>
                         </div>
                     </div>
