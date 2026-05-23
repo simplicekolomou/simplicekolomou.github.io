@@ -41,7 +41,7 @@ export default function ImageSlider({
                 }}
                 className="w-full"
                 onMouseEnter={plugin.current.stop}
-                onMouseLeave={plugin.current.reset}
+                onMouseLeave={plugin.current.play}
             >
                 <CarouselContent>
                     {images.map((src, index) => (
