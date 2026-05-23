@@ -29,6 +29,18 @@ export default function ImageSlider({
         Autoplay({ delay: interval, playOnInit: autoplay, stopOnInteraction: true })
     )
 
+    const handleMouseEnter = () => {
+        if (autoplay && plugin.current && plugin.current.stop) {
+            plugin.current.stop();
+        }
+    };
+
+    const handleMouseLeave = () => {
+        if (autoplay && plugin.current && plugin.current.play) {
+            plugin.current.play();
+        }
+    };
+
     if (!images || images.length === 0) return null;
 
     return (
@@ -40,8 +52,8 @@ export default function ImageSlider({
                     align: "start",
                 }}
                 className="w-full"
-                onMouseEnter={plugin.current.stop}
-                onMouseLeave={plugin.current.play}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
             >
                 <CarouselContent>
                     {images.map((src, index) => (
