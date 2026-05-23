@@ -12,7 +12,7 @@ export default function RootLayout({
   return (
       <html lang="fr" suppressHydrationWarning>
       <body className="min-h-screen flex flex-col">
-          <ThemeProvider>
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <NavBar />
             <main className="flex-1">
                 {children}

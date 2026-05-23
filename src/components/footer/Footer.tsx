@@ -2,10 +2,9 @@ import Link from "next/link";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faLinkedin, faSquareFacebook, faSquareGithub} from "@fortawesome/free-brands-svg-icons";
 import {Heart} from "lucide-react";
+import {text} from "@/data/contentText";
 
 export default function Footer() {
-    const currentYear = new Date().getFullYear();
-
     return (
         <footer className="w-full border-t bg-background/95 backdrop-blur-sm mt-4">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -13,41 +12,40 @@ export default function Footer() {
                     {/* Brand / À propos */}
                     <div className="col-span-1 md:col-span-2">
                         <h3 className="text-lg font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent mb-3">
-                            Simplice Kolomou
+                            {text.footer.me}
                         </h3>
                         <p className="text-sm text-muted-foreground max-w-md">
-                            Développeur full-stack passionné par la création d&apos;applications modernes,
-                            performantes et accessibles. Transformons vos idées en réalité numérique.
+                            {text.footer.aboutMe}
                         </p>
                     </div>
 
                     {/* Liens rapides */}
                     <div>
-                        <h4 className="font-semibold text-foreground mb-3">Navigation</h4>
+                        <h4 className="font-semibold text-foreground mb-3">{text.footer.navigations.title}</h4>
                         <ul className="space-y-2 text-sm">
                             <li>
                                 <Link href="/" className="text-muted-foreground hover:text-primary transition-colors">
-                                    À propos
+                                    {text.footer.navigations.about}
                                 </Link>
                             </li>
                             <li>
                                 <Link href="/skills" className="text-muted-foreground hover:text-primary transition-colors">
-                                    Compétences
+                                    {text.footer.navigations.skills}
                                 </Link>
                             </li>
                             <li>
                                 <Link href="/experiences" className="text-muted-foreground hover:text-primary transition-colors">
-                                    Expériences
+                                    {text.footer.navigations.experiences}
                                 </Link>
                             </li>
                             <li>
                                 <Link href="/portfolio" className="text-muted-foreground hover:text-primary transition-colors">
-                                    Projets
+                                    {text.footer.navigations.projects}
                                 </Link>
                             </li>
                             <li>
                                 <Link href="/contacts" className="text-muted-foreground hover:text-primary transition-colors">
-                                    Contact
+                                    {text.footer.navigations.contact}
                                 </Link>
                             </li>
                         </ul>
@@ -55,7 +53,7 @@ export default function Footer() {
 
                     {/* Réseaux sociaux */}
                     <div>
-                        <h4 className="font-semibold text-foreground mb-3">Suivez-moi</h4>
+                        <h4 className="font-semibold text-foreground mb-3">{text.footer.followMe}</h4>
                         <div className="flex space-x-4">
                             <Link
                                 href="https://github.com/simplicekolomou"
@@ -88,11 +86,9 @@ export default function Footer() {
 
                 {/* Copyright et mentions */}
                 <div className="mt-8 pt-6 border-t text-center text-sm text-muted-foreground flex flex-col sm:flex-row justify-between items-center gap-2">
-                    <p>
-                        &copy; {currentYear} Simplice Kolomou. Tous droits réservés.
-                    </p>
+                    <p>{text.footer.copyright}</p>
                     <p className="flex items-center gap-1">
-                        Fait avec <Heart className="h-3 w-3 text-red-500 fill-current" /> à Liège, Belgique.
+                        {text.footer.comment}
                     </p>
                 </div>
             </div>

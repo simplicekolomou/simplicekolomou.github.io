@@ -4,6 +4,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faLinkedin, faSquareFacebook, faSquareGithub} from "@fortawesome/free-brands-svg-icons";
 import {faEnvelope, faPhone} from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
+import {text} from "@/data/contentText";
 
 export default function Contacts() {
     return (
@@ -11,10 +12,10 @@ export default function Contacts() {
             {/* En-tête */}
             <div className="text-center mb-12">
                 <h1 className="text-4xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-                    Contactez-moi
+                    {text.contact.title}
                 </h1>
                 <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">
-                    N&apos;hésitez pas à me contacter pour toute question ou collaboration
+                    {text.contact.content}
                 </p>
                 <div className="w-24 h-1 bg-primary/30 mx-auto mt-4 rounded-full" />
             </div>
@@ -25,17 +26,17 @@ export default function Contacts() {
                 <Card className="hover:shadow-md transition-shadow">
                     <CardHeader className="flex flex-row items-center gap-4 pb-2">
                         <FontAwesomeIcon icon={faEnvelope} className="h-8 w-8 text-primary" />
-                        <CardTitle className="text-xl">Email</CardTitle>
+                        <CardTitle className="text-xl">{text.contact.email.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
                         <Link
                             href="mailto:simplicekolomou@gmail.com"
                             className="text-muted-foreground hover:text-primary transition-colors break-all"
                         >
-                            simplicekolomou@gmail.com
+                            {text.contact.email.mail}
                         </Link>
                         <CardDescription className="mt-2">
-                            Cliquez pour ouvrir votre messagerie par défaut
+                            {text.contact.email.description}
                         </CardDescription>
                     </CardContent>
                 </Card>
@@ -44,7 +45,7 @@ export default function Contacts() {
                 <Card className="hover:shadow-md transition-shadow">
                     <CardHeader className="flex flex-row items-center gap-4 pb-2">
                         <FontAwesomeIcon icon={faLinkedin} className="h-8 w-8 text-primary" />
-                        <CardTitle className="text-xl">LinkedIn</CardTitle>
+                        <CardTitle className="text-xl">{text.contact.linkedin.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
                         <Link
@@ -53,10 +54,10 @@ export default function Contacts() {
                             rel="noopener noreferrer"
                             className="text-muted-foreground hover:text-primary transition-colors"
                         >
-                            Kolomou Simplice
+                            {text.contact.linkedin.profile}
                         </Link>
                         <CardDescription className="mt-2">
-                            Profil professionnel et réseau
+                            {text.contact.linkedin.description}
                         </CardDescription>
                     </CardContent>
                 </Card>
@@ -65,7 +66,7 @@ export default function Contacts() {
                 <Card className="hover:shadow-md transition-shadow">
                     <CardHeader className="flex flex-row items-center gap-4 pb-2">
                         <FontAwesomeIcon icon={faSquareGithub} className="h-8 w-8 text-primary" />
-                        <CardTitle className="text-xl">GitHub</CardTitle>
+                        <CardTitle className="text-xl">{text.contact.github.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
                         <Link
@@ -74,10 +75,10 @@ export default function Contacts() {
                             rel="noopener noreferrer"
                             className="text-muted-foreground hover:text-primary transition-colors"
                         >
-                            simplicekolomou.github.io
+                            {text.contact.github.profile}
                         </Link>
                         <CardDescription className="mt-2">
-                            Mes projets open source
+                            {text.contact.github.description}
                         </CardDescription>
                     </CardContent>
                 </Card>
@@ -86,19 +87,19 @@ export default function Contacts() {
                 <Card className="hover:shadow-md transition-shadow">
                     <CardHeader className="flex flex-row items-center gap-4 pb-2">
                         <FontAwesomeIcon icon={faSquareFacebook} className="h-8 w-8 text-primary" />
-                        <CardTitle className="text-xl">GitHub</CardTitle>
+                        <CardTitle className="text-xl">{text.contact.facebook.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
                         <Link
-                            href="https://simplicekolomou.github.io"
+                            href="#"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-muted-foreground hover:text-primary transition-colors"
                         >
-                            simplicekolomou.github.io
+                            {text.contact.facebook.profile}
                         </Link>
                         <CardDescription className="mt-2">
-                            Page de profil Facebook
+                            {text.contact.facebook.description}
                         </CardDescription>
                     </CardContent>
                 </Card>
@@ -107,12 +108,12 @@ export default function Contacts() {
                 <Card className="hover:shadow-md transition-shadow">
                     <CardHeader className="flex flex-row items-center gap-4 pb-2">
                         <MapPin className="h-8 w-8 text-primary" />
-                        <CardTitle className="text-xl">Localisation</CardTitle>
+                        <CardTitle className="text-xl">{text.contact.location.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
-                        <p className="text-muted-foreground">Liège, Belgique</p>
+                        <p className="text-muted-foreground">{text.contact.location.content}</p>
                         <CardDescription className="mt-2">
-                            Disponible pour du remote ou sur place
+                            {text.contact.location.description}
                         </CardDescription>
                     </CardContent>
                 </Card>
@@ -121,12 +122,12 @@ export default function Contacts() {
                 <Card className="hover:shadow-md transition-shadow">
                     <CardHeader className="flex flex-row items-center gap-4 pb-2">
                         <FontAwesomeIcon icon={faPhone} className="h-8 w-8 text-primary" />
-                        <CardTitle className="text-xl">Téléphone</CardTitle>
+                        <CardTitle className="text-xl">{text.contact.phone.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
-                        <p className="text-muted-foreground">Liège, Belgique</p>
+                        <p className="text-muted-foreground">{text.contact.phone.content}</p>
                         <CardDescription className="mt-2">
-                            +32489957329
+                            {text.contact.phone.description}
                         </CardDescription>
                     </CardContent>
                 </Card>
@@ -135,7 +136,7 @@ export default function Contacts() {
             {/* Message de conclusion */}
             <div className="text-center mt-12 p-6 bg-muted/30 rounded-lg">
                 <p className="text-muted-foreground">
-                    Je serai ravi d&apos;échanger avec vous ! À bientôt.
+                    {text.contact.conclusion}
                 </p>
             </div>
         </main>

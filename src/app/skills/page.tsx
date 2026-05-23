@@ -1,6 +1,7 @@
 import {skills} from "@/data/skills";
 import {Code2, Database, Layout, Server, Sparkles} from "lucide-react";
 import {JSX} from "react";
+import {text} from "@/data/contentText";
 
 const categoryIcon: Record<string, JSX.Element> = {
     Frontend: <Layout className="w-5 h-5"/>,
@@ -23,12 +24,13 @@ export default function SkillsPage() {
 
             {/* Header */}
             <div className="text-center mb-12">
-                <h1 className="text-4xl font-bold">
-                    Stack technique
+                <h1 className="text-4xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+                    {text.skills.title}
                 </h1>
-                <p className="text-muted-foreground mt-2">
-                    Technologies utilisées dans mes projets
+                <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">
+                    {text.skills.content}
                 </p>
+                <div className="w-24 h-1 bg-primary/30 mx-auto mt-4 rounded-full" />
             </div>
 
             {/* Sections */}
@@ -36,7 +38,7 @@ export default function SkillsPage() {
                 {Object.entries(skillsByCategory).map(([category, items]) => (
                     <section key={category} className="p-6 rounded-xl border bg-card">
 
-                        {/* Category header */}
+                        {/* Section header */}
                         <div className="flex items-center gap-2 mb-5">
                             <div className="text-primary">
                                 {categoryIcon[category]}

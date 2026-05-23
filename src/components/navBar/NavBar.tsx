@@ -6,13 +6,14 @@ import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import ThemeSwitcher from "@/components/theme/ThemeSwitcher";
 import { cn } from "@/lib/utils";
+import {text} from "@/data/contentText";
 
 const navLinks = [
-    { href: "/", label: "À propos" },
-    { href: "/skills", label: "Compétences" },
-    { href: "/portfolio", label: "Projets" },
-    { href: "/experiences", label: "Expériences" },
-    { href: "/contacts", label: "Contact" },
+    { href: "/", label: `${text.nav.about}` },
+    { href: "/skills", label: `${text.nav.skills}` },
+    { href: "/portfolio", label: `${text.nav.projects}` },
+    { href: "/experiences", label: `${text.nav.experiences}` },
+    { href: "/contacts", label: `${text.nav.contact}` },
 ];
 
 export default function NavBar() {
@@ -54,7 +55,7 @@ export default function NavBar() {
                     {/* Logo / identité */}
                     <Link href="/" className="flex items-center space-x-2">
                         <span className="text-xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-                          Simplice Kolomou
+                          {text.nav.logo}
                         </span>
                     </Link>
 

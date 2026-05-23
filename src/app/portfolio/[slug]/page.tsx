@@ -1,0 +1,133 @@
+import { projects } from "@/data/projects";
+import { technologies, type Technology } from "@/data/technology";
+import { notFound } from "next/navigation";
+import Link from "next/link";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Calendar, Users, User, ExternalLink } from "lucide-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCode } from "@fortawesome/free-solid-svg-icons";
+import ImageSlider from "@/components/slider/ImageSlider";
+import {text} from "@/data/contentText";
+
+// Génération statique de tous les slugs (obligatoire pour l'export)
+export async function generateStaticParams() {
+    return projects.map((project) => ({
+        slug: project.slug,
+    }));
+}
+
+export default async function ProjectDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+    const { slug } = await params;
+    const project = projects.find((p) => p.slug === slug);
+
+    if (!project) {
+        notFound();
+    }
+
+    // Récupération des technologies du projet
+    let projectTechs: Technology[] = [];
+    if ("techIds" in project && Array.isArray(project.techIds)) {
+        projectTechs = project.techIds
+            .map((id: string) => technologies.find((t) => t.id === id))
+            .filter((t): t is Technology => t !== undefined);
+    }
+
+    // Images pour le slider
+    const sliderImages = project.images ?? (project.image ? [project.image] : []);
+
+    return (
+        <main className="container mx-auto px-4 py-12 max-w-5xl">
+            {/* En-tête du projet */}
+            <div className="mb-8">
+                <h1 className="text-4xl font-bold">{project.title}</h1>
+                <div className="flex flex-wrap items-center gap-4 mt-2 text-muted-foreground">
+                    {project.date && (
+                        <div className="flex items-center gap-1">
+                            <Calendar className="h-4 w-4" />
+                            <span>{project.date}</span>
+                        </div>
+                    )}
+                    <div className="flex items-center gap-1">
+                        {project.type === "personal" ? (
+                            <>
+                                <User className="h-4 w-4" />
+                                <span>{text.projects.projectTypes.personal}</span>
+                            </>
+                        ) : (
+                            <>
+                                <Users className="h-4 w-4" />
+                                <span>{text.projects.projectTypes.team}</span>
+                            </>
+                        )}
+                        {project.type === "team" && project.team && (
+                            <span className="text-sm">– {project.team.join(", ")}</span>
+                        )}
+                    </div>
+                </div>
+            </div>
+
+            {/* Slider d'images */}
+            {sliderImages.length > 0 && (
+                <ImageSlider images={sliderImages} alt={project.title} />
+            )}
+
+            {/* Description */}
+            <div className="prose dark:prose-invert max-w-none mb-8">
+                <p>{project.description}</p>
+            </div>
+
+            {/* Technologies utilisées */}
+            {projectTechs.length > 0 && (
+                <div className="mb-8">
+                    <h2 className="text-2xl font-semibold mb-3">Technologies</h2>
+                    <div className="flex flex-wrap gap-2">
+                        {projectTechs.map((tech) => (
+                            <Badge key={tech.id} variant="secondary" className="flex items-center gap-1">
+                                {tech.icon && <span className="text-sm inline-flex items-center">{tech.icon}</span>}
+                                {tech.name}
+                            </Badge>
+                        ))}
+                    </div>
+                </div>
+            )}
+
+            {/* Liens (repos & démo) */}
+            <div className="flex flex-wrap gap-4">
+                {project.repos && project.repos.length > 0 && (
+                    project.repos.length === 1 ? (
+                        <Button asChild>
+                            <Link href={project.repos[0]} target="_blank" rel="noopener noreferrer">
+                                <FontAwesomeIcon icon={faCode} className="mr-2 h-4 w-4" />
+                                {text.projects.actions.repos.mono}
+                            </Link>
+                        </Button>
+                    ) : (
+                        <>
+                            <Button asChild variant="outline">
+                                <Link href={project.repos[0]} target="_blank" rel="noopener noreferrer">
+                                    <FontAwesomeIcon icon={faCode} className="mr-2 h-4 w-4" />
+                                    {text.projects.actions.repos.frontend}
+                                </Link>
+                            </Button>
+                            <Button asChild variant="outline">
+                                <Link href={project.repos[1]} target="_blank" rel="noopener noreferrer">
+                                    <FontAwesomeIcon icon={faCode} className="mr-2 h-4 w-4" />
+                                    {text.projects.actions.repos.backend}
+                                </Link>
+                            </Button>
+                        </>
+                    )
+                )}
+                {project.demo && (
+                    <Button asChild>
+                        <Link href={project.demo} target="_blank" rel="noopener noreferrer">
+                            <ExternalLink className="mr-2 h-4 w-4" />
+                            {text.projects.actions.demo}
+                        </Link>
+                    </Button>
+                )}
+            </div>
+        </main>
+    );
+}
