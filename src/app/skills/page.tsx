@@ -12,6 +12,11 @@ const categoryIcon: Record<string, JSX.Element> = {
 };
 
 export default function SkillsPage() {
+    /**
+     * Récupère les compétences et les organise par catégorie. Si une compétence n'a pas de catégorie, elle est placée dans "Autre".
+     * @return Un objet où les clés sont les catégories et les valeurs sont des tableaux de compétences appartenant à ces catégories.
+     * Note: Cette organisation facilite l'affichage des compétences par section dans le composant React.
+     */
     const skillsByCategory = skills.reduce((acc, skill) => {
         const cat = skill.category || "Autre";
         if (!acc[cat]) acc[cat] = [];
