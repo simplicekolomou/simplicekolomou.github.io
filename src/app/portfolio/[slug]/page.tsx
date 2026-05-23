@@ -69,7 +69,12 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
 
             {/* Slider d'images */}
             {sliderImages.length > 0 && (
-                <ImageSlider images={sliderImages} alt={project.title} />
+                <ImageSlider
+                    images={sliderImages}
+                    alt={project.title}
+                    interval={3000}
+                    autoplay={true}
+                />
             )}
 
             {/* Description */}
