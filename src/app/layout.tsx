@@ -3,8 +3,9 @@ import React, { ReactNode } from "react";
 import NavBar from "@/components/navBar/NavBar";
 import ThemeProvider from "@/components/theme/ThemeProvider";
 import Footer from "@/components/footer/Footer";
+import type { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
     title: "Simplice Kolomou",
     description: "Portfolio développeur",
     icons: {
