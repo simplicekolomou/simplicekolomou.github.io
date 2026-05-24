@@ -57,9 +57,9 @@ export const text = {
             code: "Code source",
 
             repos: {
-                frontend: "Frontend",
-                backend: "Backend",
-                mono: "Repository"
+                frontend: "Dépôt github Frontend",
+                backend: "Dépôt github Backend",
+                mono: "Dépôt github"
             }
         },
 

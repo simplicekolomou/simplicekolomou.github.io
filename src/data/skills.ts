@@ -44,7 +44,7 @@ export const skills: Skill[] = [
     { id: "java", name: "Java", type: SkillType.Technical, category: "Backend", context: "POO · API REST · JPA/Hibernate" },
     { id: "kotlin", name: "Kotlin", type: SkillType.Technical, category: "Backend", context: "Développement Android natif · Applications Mobiles MVVM" },
     { id: "csharp", name: "C#", type: SkillType.Technical, category: "Backend", context: ".NET Desktop apps · Architecture MVP · ASP.NET Core" },
-    { id: "php", name: "PHP", type: SkillType.Technical, category: "Backend", context: "Développement backend web · applications dynamiques et API Rest" },
+    { id: "php", name: "PHP", type: SkillType.Technical, category: "Backend", context: "Développement backend web · applications dynamiques et API REST" },
 
     // Frontend (Technical)
     { id: "ts", name: "TypeScript", type: SkillType.Technical, category: "Frontend", context: "Développement frontend typé · applications React/Next.js" },
@@ -52,12 +52,12 @@ export const skills: Skill[] = [
     { id: "nextjs", name: "Next.js", type: SkillType.Technical, category: "Frontend", context: "Applications React · rendu SSR/SSG/CSR · Dashboards" },
     { id: "shadcn", name: "Shadcn UI", type: SkillType.Technical, category: "Frontend", context: "Composants UI React réutilisables" },
     { id: "chakra-ui", name: "Chakra UI", type: SkillType.Technical, category: "Frontend", context: "Composants UI React · design system · Accessibilité · Responsibilité" },
-    { id: "tailwind", name: "Tailwind CSS", type: SkillType.Technical, category: "Frontend", context: "Stylisation d’interfaces modernes · design responsive utility-first" },
+    { id: "tailwind", name: "Tailwind CSS", type: SkillType.Technical, category: "Frontend", context: "Stylisation d’interfaces modernes · design responsive" },
 
     // Base de données (Technical)
     { id: "mysql", name: "MySQL", type: SkillType.Technical, category: "Database", context: "Bases de données relationnelles · applications web et projets académiques" },
     { id: "pgsql", name: "PostgreSQL", type: SkillType.Technical, category: "Database", context: "Bases de données relationnelles avancées · API backend et applications full-stack" },
-    { id: "sqlserver", name: "SQL Server", type: SkillType.Technical, category: "Database", context: "Bases de données relationnelles Microsoft · applications .NET et projets académiques" },
+    { id: "sqlserver", name: "SQL Server", type: SkillType.Technical, category: "Database", context: "Bases de données relationnelles · applications .NET et projets académiques" },
     { id: "oracle", name: "Oracle SQL", type: SkillType.Technical, category: "Database", context: "Bases de données relationnelles · environnement académique et exercices SQL" },
 
     // Outils (Tool)
