@@ -185,7 +185,13 @@ const myProjects: Project[] = [
         demo: "https://simplicekolomou.github.io/",
         type: "personal",
         image: "/images/portfolio/portfolio-presentation.png",
-        images: []
+        images: [
+            "/images/portfolio/portfolio-experiences.png",
+            "/images/portfolio/portfolio-project-details.png",
+            "/images/portfolio/portfolio-projects.png",
+            "/images/portfolio/portfolio-skills.png",
+            "/images/portfolio/portfolio-presentation.png"
+        ]
     },
     {
         id: "ticketing",
@@ -211,7 +217,15 @@ const myProjects: Project[] = [
         type: "team",
         team: ["Aboubacar Sylla"],
         image: "/images/ticketing/ticketing-presentation.png",
-        images: []
+        images: [
+            "/images/ticketing/ticketing-create-ticket.png",
+            "/images/ticketing/ticketing-customer.png",
+            "/images/ticketing/ticketing-inbox.png",
+            "/images/ticketing/ticketing-notifications.png",
+            "/images/ticketing/ticketing-support.png",
+            "/images/ticketing/ticketing-team.png",
+            "/images/ticketing/ticketing-presentation.png"
+        ]
     }
 ];
 
