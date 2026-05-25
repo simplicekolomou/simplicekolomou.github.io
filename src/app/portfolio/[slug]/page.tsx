@@ -77,9 +77,26 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                 />
             )}
 
-            {/* Description */}
-            <div className="prose dark:prose-invert max-w-none mb-8">
-                <p>{project.description}</p>
+            {/* Détails du projet */}
+            <div className="space-y-8 mb-8">
+                {project.details.map((section) => (
+                    <div key={section.id}>
+                        <h2 className="text-2xl font-semibold mb-3">
+                            {section.title}
+                        </h2>
+
+                        <div className="space-y-2">
+                            {section.items.map((item, index) => (
+                                <p
+                                    key={index}
+                                    className="text-muted-foreground leading-relaxed"
+                                >
+                                    {item}
+                                </p>
+                            ))}
+                        </div>
+                    </div>
+                ))}
             </div>
 
             {/* Technologies utilisées */}

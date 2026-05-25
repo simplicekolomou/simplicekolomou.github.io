@@ -24,84 +24,84 @@ export default function Contacts() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {/* Email */}
                 <Card className="hover:shadow-md transition-shadow">
+                    <Link
+                        href="mailto:simplicekolomou@gmail.com"
+                        className="text-muted-foreground hover:text-primary transition-colors break-all"
+                    >
                     <CardHeader className="flex flex-row items-center gap-4 pb-2">
                         <FontAwesomeIcon icon={faEnvelope} className="h-8 w-8 text-primary" />
                         <CardTitle className="text-xl">{text.contact.email.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                        <Link
-                            href="mailto:simplicekolomou@gmail.com"
-                            className="text-muted-foreground hover:text-primary transition-colors break-all"
-                        >
+                        </CardHeader>
+                        <CardContent>
                             {text.contact.email.mail}
-                        </Link>
-                        <CardDescription className="mt-2">
-                            {text.contact.email.description}
-                        </CardDescription>
-                    </CardContent>
+                            <CardDescription className="mt-2">
+                                {text.contact.email.description}
+                            </CardDescription>
+                        </CardContent>
+                    </Link>
                 </Card>
 
                 {/* LinkedIn */}
                 <Card className="hover:shadow-md transition-shadow">
-                    <CardHeader className="flex flex-row items-center gap-4 pb-2">
-                        <FontAwesomeIcon icon={faLinkedin} className="h-8 w-8 text-primary" />
-                        <CardTitle className="text-xl">{text.contact.linkedin.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                        <Link
-                            href="https://www.linkedin.com/in/kolomou-simplice-1b9b4a1b3/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-muted-foreground hover:text-primary transition-colors"
-                        >
+                    <Link
+                        href="https://www.linkedin.com/in/kolomou-simplice-1b9b4a1b3/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-muted-foreground hover:text-primary transition-colors"
+                    >
+                        <CardHeader className="flex flex-row items-center gap-4 pb-2">
+                            <FontAwesomeIcon icon={faLinkedin} className="h-8 w-8 text-primary" />
+                            <CardTitle className="text-xl">{text.contact.linkedin.title}</CardTitle>
+                        </CardHeader>
+                        <CardContent>
                             {text.contact.linkedin.profile}
-                        </Link>
-                        <CardDescription className="mt-2">
-                            {text.contact.linkedin.description}
-                        </CardDescription>
-                    </CardContent>
+                            <CardDescription className="mt-2">
+                                {text.contact.linkedin.description}
+                            </CardDescription>
+                        </CardContent>
+                    </Link>
                 </Card>
 
                 {/* GitHub */}
                 <Card className="hover:shadow-md transition-shadow">
-                    <CardHeader className="flex flex-row items-center gap-4 pb-2">
-                        <FontAwesomeIcon icon={faSquareGithub} className="h-8 w-8 text-primary" />
-                        <CardTitle className="text-xl">{text.contact.github.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                        <Link
-                            href="https://simplicekolomou.github.io"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-muted-foreground hover:text-primary transition-colors"
-                        >
+                    <Link
+                        href="https://simplicekolomou.github.io"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-muted-foreground hover:text-primary transition-colors"
+                    >
+                        <CardHeader className="flex flex-row items-center gap-4 pb-2">
+                            <FontAwesomeIcon icon={faSquareGithub} className="h-8 w-8 text-primary" />
+                            <CardTitle className="text-xl">{text.contact.github.title}</CardTitle>
+                        </CardHeader>
+                        <CardContent>
                             {text.contact.github.profile}
-                        </Link>
-                        <CardDescription className="mt-2">
-                            {text.contact.github.description}
-                        </CardDescription>
-                    </CardContent>
+                            <CardDescription className="mt-2">
+                                {text.contact.github.description}
+                            </CardDescription>
+                        </CardContent>
+                    </Link>
                 </Card>
 
                 {/* Facebook */}
                 <Card className="hover:shadow-md transition-shadow">
-                    <CardHeader className="flex flex-row items-center gap-4 pb-2">
-                        <FontAwesomeIcon icon={faSquareFacebook} className="h-8 w-8 text-primary" />
-                        <CardTitle className="text-xl">{text.contact.facebook.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                        <Link
-                            href="#"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-muted-foreground hover:text-primary transition-colors"
-                        >
+                    <Link
+                        href="#"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-muted-foreground hover:text-primary transition-colors"
+                    >
+                        <CardHeader className="flex flex-row items-center gap-4 pb-2">
+                            <FontAwesomeIcon icon={faSquareFacebook} className="h-8 w-8 text-primary" />
+                            <CardTitle className="text-xl">{text.contact.facebook.title}</CardTitle>
+                        </CardHeader>
+                        <CardContent>
                             {text.contact.facebook.profile}
-                        </Link>
-                        <CardDescription className="mt-2">
-                            {text.contact.facebook.description}
-                        </CardDescription>
-                    </CardContent>
+                            <CardDescription className="mt-2">
+                                {text.contact.facebook.description}
+                            </CardDescription>
+                        </CardContent>
+                    </Link>
                 </Card>
 
                 {/* Localisation (optionnel) */}
