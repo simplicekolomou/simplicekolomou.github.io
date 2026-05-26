@@ -52,7 +52,10 @@ const myProjects: Project[] = [
         id: "bookexchange",
         title: "Bookexchange",
         description:
-            "Plateforme d'échange de livres. Développement d'une API REST Spring Boot (Java 25, JPA/Hibernate) et d'un frontend React + TypeScript (RTK Query). Implémentation de l'authentification, gestion des collections, messagerie instantanée et système d'échanges. Conception mobile-first.",
+            `
+                Plateforme communautaire de partage de livres développée en binôme avec Spring Boot (backend) et React + TypeScript (frontend).
+                Fonctionnalités clés : gestion de collections de livres, propositions d’échanges, messagerie instantanée avec notifications temps réel.
+            `,
         details: [
             {
                 id: "overview",
@@ -282,7 +285,9 @@ const myProjects: Project[] = [
                 id: "overview",
                 title: "Présentation",
                 items: [
-                    "Application Android native de gestion de listes de courses, développée dans le cadre d’un projet personnel pour améliorer mes compétences en développement mobile avec Kotlin et le pattern MVVM.",
+                    "Application Android native de gestion de listes de courses, développée dans un cadre académique. " +
+                    "L’application permet aux utilisateurs de planifier leurs repas, de créer des listes de courses associées et de partager ces listes via la caméra pour faciliter les échanges entre utilisateurs.",
+                    "Le projet a été réalisé en suivant une méthodologie agile, avec la rédaction de User Stories pour définir les fonctionnalités à implémenter et assurer une progression structurée du développement."
                 ]
             },
             {
