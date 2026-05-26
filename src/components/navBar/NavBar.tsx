@@ -1,18 +1,11 @@
 "use client";
 
-import {useState, useEffect, useRef} from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu } from "lucide-react";
+import {Menu, X} from "lucide-react";
 import { cn } from "@/lib/utils";
 import { text } from "@/data/contentText";
-import {
-    Sheet,
-    SheetContent,
-    SheetTitle,
-    SheetTrigger,
-} from "@/components/ui/sheet";
-import { Button } from "@/components/ui/button";
 import {
     NavigationMenu,
     NavigationMenuItem,
@@ -33,6 +26,7 @@ export default function NavBar() {
     const [scrolled, setScrolled] = useState(false);
     const [open, setOpen] = useState(false);
     const pathname = usePathname();
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     // Détection du scroll
     useEffect(() => {
@@ -63,16 +57,16 @@ export default function NavBar() {
             )}
         >
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex h-16 items-center justify-between">
-                    {/* Logo */}
+                <div className="flex h-16 items-center">
+                    {/* Logo à gauche */}
                     <Link href="/" className="flex items-center space-x-2">
-            <span className="text-xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-              {text.nav.logo}
-            </span>
+                        <span className="text-xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+                            {text.nav.logo}
+                        </span>
                     </Link>
 
-                    {/* Navigation desktop avec asChild au lieu de legacyBehavior */}
-                    <NavigationMenu className="hidden md:flex">
+                    {/* Navigation desktop (centrée/ml-auto) */}
+                    <NavigationMenu className="hidden md:flex ml-auto">
                         <NavigationMenuList>
                             {navLinks.map((link) => (
                                 <NavigationMenuItem key={link.href}>
@@ -92,42 +86,44 @@ export default function NavBar() {
                                 </NavigationMenuItem>
                             ))}
                         </NavigationMenuList>
+                        <div>
+                            <ThemeSwitcher />
+                        </div>
                     </NavigationMenu>
 
-                    {/* Zone droite : theme switcher + menu mobile (Sheet) */}
-                    <div className="flex items-center gap-2">
+                    {/* Mobile : bouton menu + theme switcher */}
+                    <div className="flex items-center gap-2 md:hidden ml-auto md:ml-0">
                         <ThemeSwitcher />
-                        <Sheet open={open} onOpenChange={setOpen}>
-                            <SheetTrigger asChild>
-                                <Button variant="ghost" size="icon" className="md:hidden">
-                                    <Menu className="h-5 w-5" />
-                                    <span className="sr-only">Menu</span>
-                                </Button>
-                            </SheetTrigger>
-                            <SheetContent side="right" className="w-[280px] sm:w-[350px]">
-                                {/* SheetTitle obligatoire pour l'accessibilité, masqué visuellement */}
-                                <SheetTitle className="sr-only">Menu principal</SheetTitle>
-                                <nav className="flex flex-col gap-4 mt-8">
-                                    {navLinks.map((link) => (
-                                        <Link
-                                            key={link.href}
-                                            href={link.href}
-                                            onClick={() => setOpen(false)}
-                                            className={cn(
-                                                "text-lg font-medium transition-colors hover:text-primary",
-                                                pathname === link.href
-                                                    ? "text-primary"
-                                                    : "text-foreground/80"
-                                            )}
-                                        >
-                                            {link.label}
-                                        </Link>
-                                    ))}
-                                </nav>
-                            </SheetContent>
-                        </Sheet>
+                        <button
+                            onClick={() => setIsMenuOpen(!isMenuOpen)}
+                            className="p-2 rounded-md text-foreground/80 hover:bg-muted focus:outline-none"
+                            aria-label="Menu"
+                        >
+                            {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+                        </button>
                     </div>
                 </div>
+
+                {/* Menu mobile (overlay) */}
+                {isMenuOpen && (
+                    <div className="md:hidden border-t py-4 pb-6 space-y-2 bg-background/95 backdrop-blur-md">
+                        {navLinks.map((link) => (
+                            <Link
+                                key={link.href}
+                                href={link.href}
+                                onClick={() => setIsMenuOpen(false)}
+                                className={cn(
+                                    "block px-3 py-2 rounded-md text-base font-medium transition-colors",
+                                    pathname === link.href
+                                        ? "bg-primary/10 text-primary"
+                                        : "text-foreground/80 hover:text-foreground hover:bg-muted"
+                                )}
+                            >
+                                {link.label}
+                            </Link>
+                        ))}
+                    </div>
+                )}
             </div>
         </header>
     );
