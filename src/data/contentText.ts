@@ -138,7 +138,8 @@ export const text = {
         projects: "Projets",
         contact: "Contact",
         experiences: "Expériences",
-        skills: "Compétences"
+        skills: "Compétences",
+        title: "Navigation",
     },
 
     footer: {
@@ -148,15 +149,6 @@ export const text = {
             Développeur full-stack passionné par la création d’applications modernes,
             performantes et accessibles.
         `,
-
-        navigations: {
-            title: "Navigation",
-            about: "À propos",
-            projects: "Projets",
-            contact: "Contact",
-            experiences: "Expériences",
-            skills: "Compétences"
-        },
 
         followMe: "Retrouvez-moi",
 

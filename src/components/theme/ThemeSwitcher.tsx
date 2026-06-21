@@ -11,10 +11,11 @@ export default function ThemeSwitcher() {
             variant="ghost"
             className="w-8 h-8 rounded-full flex items-center justify-center text-muted-foreground"
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
-            {!isDark ? (
-                <Sun className="h-[1.5rem] w-[1.5rem] transition-all"/>
-            ) : (
+            {isDark ? (
                 <Moon className="h-[1.5rem] w-[1.5rem] transition-all"/>
+                
+            ) : (
+                <Sun className="h-[1.5rem] w-[1.5rem] transition-all"/>
             )}
         </Button>
     );

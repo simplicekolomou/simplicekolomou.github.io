@@ -91,6 +91,41 @@ export default function NavBar() {
                         </div>
                     </NavigationMenu>
 
+                    {/* Zone droite : theme switcher + menu mobile (poussée à droite) */}
+                    {/*<div className="flex items-center gap-2 ml-auto md:ml-0">
+                        <ThemeSwitcher />
+                        <Sheet open={open} onOpenChange={setOpen}>
+                            <SheetTrigger asChild>
+                                <Button variant="ghost" size="icon" className="md:hidden">
+                                    <Menu className="h-5 w-5" />
+                                    <span className="sr-only">Menu</span>
+                                </Button>
+                            </SheetTrigger>
+                            <SheetContent
+                                side="right"
+                                className="w-[280px] sm:w-[350px] p-0 flex flex-col"
+                            >
+                                <SheetTitle className="sr-only">Menu principal</SheetTitle>
+
+                                <nav className="flex flex-col gap-4 px-6 pt-8 pb-6">
+                                    {navLinks.map((link) => (
+                                        <Link
+                                            key={link.href}
+                                            href={link.href}
+                                            onClick={() => setOpen(false)}
+                                            className={cn(
+                                                "text-lg font-medium transition-colors hover:text-primary",
+                                                pathname === link.href ? "text-primary" : "text-foreground/80"
+                                            )}
+                                        >
+                                            {link.label}
+                                        </Link>
+                                    ))}
+                                </nav>
+                            </SheetContent>
+                        </Sheet>
+                    </div>*/}
+
                     {/* Mobile : bouton menu + theme switcher */}
                     <div className="flex items-center gap-2 md:hidden ml-auto md:ml-0">
                         <ThemeSwitcher />

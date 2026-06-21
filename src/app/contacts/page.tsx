@@ -44,7 +44,7 @@ export default function Contacts() {
                 {/* LinkedIn */}
                 <Card className="hover:shadow-md transition-shadow">
                     <Link
-                        href="https://www.linkedin.com/in/kolomou-simplice-1b9b4a1b3/"
+                        href="https://www.linkedin.com/in/kolomou"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-muted-foreground hover:text-primary transition-colors"
@@ -65,7 +65,7 @@ export default function Contacts() {
                 {/* GitHub */}
                 <Card className="hover:shadow-md transition-shadow">
                     <Link
-                        href="https://simplicekolomou.github.io"
+                        href="https://github.com/simplicekolomou"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-muted-foreground hover:text-primary transition-colors"
@@ -83,7 +83,7 @@ export default function Contacts() {
                     </Link>
                 </Card>
 
-                {/* Facebook */}
+                {/* Facebook
                 <Card className="hover:shadow-md transition-shadow">
                     <Link
                         href="#"
@@ -103,6 +103,7 @@ export default function Contacts() {
                         </CardContent>
                     </Link>
                 </Card>
+                */}
 
                 {/* Localisation (optionnel) */}
                 <Card className="hover:shadow-md transition-shadow">

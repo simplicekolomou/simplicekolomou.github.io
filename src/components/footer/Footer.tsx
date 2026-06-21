@@ -1,7 +1,6 @@
 import Link from "next/link";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faLinkedin, faSquareFacebook, faSquareGithub} from "@fortawesome/free-brands-svg-icons";
-import {Heart} from "lucide-react";
+import {faLinkedin, faSquareGithub} from "@fortawesome/free-brands-svg-icons";
 import {text} from "@/data/contentText";
 
 export default function Footer() {
@@ -21,31 +20,31 @@ export default function Footer() {
 
                     {/* Liens rapides */}
                     <div>
-                        <h4 className="font-semibold text-foreground mb-3">{text.footer.navigations.title}</h4>
+                        <h4 className="font-semibold text-foreground mb-3">{text.nav.title}</h4>
                         <ul className="space-y-2 text-sm">
                             <li>
                                 <Link href="/" className="text-muted-foreground hover:text-primary transition-colors">
-                                    {text.footer.navigations.about}
+                                    {text.nav.about}
                                 </Link>
                             </li>
                             <li>
                                 <Link href="/skills" className="text-muted-foreground hover:text-primary transition-colors">
-                                    {text.footer.navigations.skills}
+                                    {text.nav.skills}
                                 </Link>
                             </li>
                             <li>
                                 <Link href="/experiences" className="text-muted-foreground hover:text-primary transition-colors">
-                                    {text.footer.navigations.experiences}
+                                    {text.nav.experiences}
                                 </Link>
                             </li>
                             <li>
                                 <Link href="/portfolio" className="text-muted-foreground hover:text-primary transition-colors">
-                                    {text.footer.navigations.projects}
+                                    {text.nav.projects}
                                 </Link>
                             </li>
                             <li>
                                 <Link href="/contacts" className="text-muted-foreground hover:text-primary transition-colors">
-                                    {text.footer.navigations.contact}
+                                    {text.nav.contact}
                                 </Link>
                             </li>
                         </ul>
@@ -53,8 +52,8 @@ export default function Footer() {
 
                     {/* Réseaux sociaux */}
                     <div>
-                        <h4 className="font-semibold text-foreground mb-3">{text.footer.followMe}</h4>
-                        <div className="flex space-x-4">
+                        <h4 className="font-semibold text-foreground mb-3 flex justify-center">{text.footer.followMe}</h4>
+                        <div className="flex space-x-2 justify-center">
                             <Link
                                 href="https://github.com/simplicekolomou"
                                 target="_blank"
@@ -65,7 +64,7 @@ export default function Footer() {
                                 <FontAwesomeIcon icon={faSquareGithub} className="h-8 w-8 text-primary" />
                             </Link>
                             <Link
-                                href="https://linkedin.com/in/simplicekolomou"
+                                href="https://www.linkedin.com/in/kolomou"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-muted-foreground hover:text-primary transition-colors"
@@ -73,13 +72,13 @@ export default function Footer() {
                             >
                                 <FontAwesomeIcon icon={faLinkedin} className="h-8 w-8 text-primary" />
                             </Link>
-                            <Link
+                            {/*<Link
                                 href="mailto:contact@simplicekolomou.com"
                                 className="text-muted-foreground hover:text-primary transition-colors"
                                 aria-label="Facebook"
                             >
                                 <FontAwesomeIcon icon={faSquareFacebook} className="h-8 w-8 text-primary" />
-                            </Link>
+                            </Link>*/}
                         </div>
                     </div>
                 </div>
