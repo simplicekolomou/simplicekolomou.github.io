@@ -83,28 +83,6 @@ export default function Contacts() {
                     </Link>
                 </Card>
 
-                {/* Facebook
-                <Card className="hover:shadow-md transition-shadow">
-                    <Link
-                        href="#"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-muted-foreground hover:text-primary transition-colors"
-                    >
-                        <CardHeader className="flex flex-row items-center gap-4 pb-2">
-                            <FontAwesomeIcon icon={faSquareFacebook} className="h-8 w-8 text-primary" />
-                            <CardTitle className="text-xl">{text.contact.facebook.title}</CardTitle>
-                        </CardHeader>
-                        <CardContent>
-                            {text.contact.facebook.profile}
-                            <CardDescription className="mt-2">
-                                {text.contact.facebook.description}
-                            </CardDescription>
-                        </CardContent>
-                    </Link>
-                </Card>
-                */}
-
                 {/* Localisation (optionnel) */}
                 <Card className="hover:shadow-md transition-shadow">
                     <CardHeader className="flex flex-row items-center gap-4 pb-2">
