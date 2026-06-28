@@ -589,7 +589,7 @@ const myProjects: Project[] = [
         slug: "ticketing",
         date: "2026-03",
         repos: ["https://github.com/simplicekolomou/syasko-tickecting-front","https://github.com/simplicekolomou/syasko-tickecting-api"],
-        demo: "https://syasko-tickecting-front-ea82sqbbk-simplice-kolomous-projects.vercel.app/",
+        demo: "https://syasko-tickecting.vercel.app/",
         type: "team",
         team: ["Aboubacar Sylla"],
         image: "/images/ticketing/ticketing-presentation.png",
