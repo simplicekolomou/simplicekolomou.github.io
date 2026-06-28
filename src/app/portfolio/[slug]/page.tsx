@@ -38,10 +38,12 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
 
     return (
         <main className="container mx-auto px-4 py-12 max-w-5xl">
-            {/* En-tête du projet */}
-            <div className="mb-8">
-                <h1 className="text-4xl font-bold">{project.title}</h1>
-                <div className="flex flex-wrap items-center gap-4 mt-2 text-muted-foreground">
+            {/* En-tête */}
+            <div className="text-center mb-12">
+                <h1 className="text-4xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+                    {project.title}
+                </h1>
+                <div className="flex flex-wrap items-center gap-4 mt-2 text-muted-foreground justify-center w-full">
                     {project.date && (
                         <div className="flex items-center gap-1">
                             <Calendar className="h-4 w-4" />
@@ -65,7 +67,12 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                         )}
                     </div>
                 </div>
+                <div className="w-24 h-1 bg-primary/30 mx-auto mt-2 rounded-full" />
             </div>
+
+            <Button variant={"default"} className="mb-2 w-36">
+                Retour
+            </Button>
 
             {/* Slider d'images */}
             {sliderImages.length > 0 && (
