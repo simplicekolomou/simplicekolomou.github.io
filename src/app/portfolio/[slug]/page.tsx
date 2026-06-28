@@ -142,10 +142,12 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                     )
                 )}
                 {project.demo && (
-                    <Link href={project.demo} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="mr-2 h-4 w-4" />
-                        {text.projects.actions.demo}
-                    </Link>
+                    <Button asChild>
+                        <Link href={project.demo} target="_blank">
+                            <ExternalLink className="mr-2 h-4 w-4" />
+                            {text.projects.actions.demo}
+                        </Link>
+                    </Button>
                 )}
             </div>
         </main>
