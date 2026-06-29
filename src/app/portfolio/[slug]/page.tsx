@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Calendar, Users, User, ExternalLink } from "lucide-react";
+import {Calendar, Users, User, ExternalLink, ArrowLeft} from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode } from "@fortawesome/free-solid-svg-icons";
 import ImageSlider from "@/components/slider/ImageSlider";
@@ -67,11 +67,18 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                         )}
                     </div>
                 </div>
-                <div className="w-24 h-1 bg-primary/30 mx-auto mt-2 rounded-full" />
             </div>
 
-            <Button variant={"default"} className="mb-2 w-36">
-                Retour
+            <Button
+                variant={"default"}
+                className="mb-2 w-36"
+                onClick={
+                    () => {
+                        window.history.back();
+                    }
+                }
+            >
+                <ArrowLeft />{text.projects.actions.back}
             </Button>
 
             {/* Slider d'images */}

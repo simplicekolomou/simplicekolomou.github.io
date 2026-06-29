@@ -55,6 +55,7 @@ export const text = {
         actions: {
             demo: "Démo",
             code: "Code source",
+            back: "Retour aux projets",
 
             repos: {
                 frontend: "Dépôt github Frontend",
