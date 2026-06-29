@@ -131,7 +131,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                 {project.repos && project.repos.length > 0 && (
                     project.repos.length === 1 ? (
                         <Button asChild>
-                            <Link href={project.repos[0]} target="_blank" rel="noopener noreferrer">
+                            <Link href={`/${project.repos[0]}`} target="_blank" rel="noopener noreferrer">
                                 <FontAwesomeIcon icon={faCode} className="mr-2 h-4 w-4" />
                                 {text.projects.actions.repos.mono}
                             </Link>
