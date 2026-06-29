@@ -130,28 +130,28 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
             <div className="flex flex-wrap gap-4">
                 {project.repos && project.repos.length > 0 && (
                     project.repos.length === 1 ? (
-                        <Link href={project.repos[0]} target="_blank" className="flex justify-center items-center border rounded-lg p-2">
+                        <a href={project.repos[0]} target="_blank" rel="noopener noreferrer" className="flex justify-center items-center border rounded-lg p-2">
                             <FontAwesomeIcon icon={faCode} className="mr-2 h-4 w-4" />
                             {text.projects.actions.repos.mono}
-                        </Link>
+                        </a>
                     ) : (
                         <>
-                            <Link href={project.repos[0]} target="_blank" className="flex justify-center items-center border rounded-lg p-2">
+                            <a href={project.repos[0]} target="_blank" rel="noopener noreferrer" className="flex justify-center items-center border rounded-lg p-2">
                                 <FontAwesomeIcon icon={faCode} className="mr-2 h-4 w-4" />
                                 {text.projects.actions.repos.frontend}
-                            </Link>
-                            <Link href={project.repos[1]} target="_blank" className="flex justify-center items-center border rounded-lg p-2">
+                            </a>
+                            <a href={project.repos[1]} target="_blank" rel="noopener noreferrer" className="flex justify-center items-center border rounded-lg p-2">
                                 <FontAwesomeIcon icon={faCode} className="mr-2 h-4 w-4" />
                                 {text.projects.actions.repos.backend}
-                            </Link>
+                            </a>
                         </>
                     )
                 )}
                 {project.demo && (
-                    <Link href={project.demo} target="_blank" className="flex justify-center items-center border rounded-lg p-2  bg-blue-400">
+                    <a href={project.demo} target="_blank" rel="noopener noreferrer" className="flex justify-center items-center border rounded-lg p-2  bg-blue-400">
                         <ExternalLink className="mr-2 h-4 w-4" />
                         {text.projects.actions.demo}
-                    </Link>
+                    </a>
                 )}
             </div>
         </main>
