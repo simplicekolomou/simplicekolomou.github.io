@@ -131,7 +131,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                 {project.repos && project.repos.length > 0 && (
                     project.repos.length === 1 ? (
                         <Button asChild>
-                            <Link href={project.repos[0]}>
+                            <Link href={project.repos[0]} target="_blank">
                                 <FontAwesomeIcon icon={faCode} className="mr-2 h-4 w-4" />
                                 {text.projects.actions.repos.mono}
                             </Link>
@@ -145,7 +145,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                                 </Link>
                             </Button>
                             <Button asChild variant="outline">
-                                <Link href={project.repos[1]}>
+                                <Link href={project.repos[1]} target="_blank">
                                     <FontAwesomeIcon icon={faCode} className="mr-2 h-4 w-4" />
                                     {text.projects.actions.repos.backend}
                                 </Link>
@@ -155,7 +155,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                 )}
                 {project.demo && (
                     <Button asChild>
-                        <Link href={project.demo}>
+                        <Link href={project.demo} target="_blank">
                             <ExternalLink className="mr-2 h-4 w-4" />
                             {text.projects.actions.demo}
                         </Link>
