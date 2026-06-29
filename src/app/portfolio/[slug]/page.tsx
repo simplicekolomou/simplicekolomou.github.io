@@ -130,28 +130,36 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
             <div className="flex flex-wrap gap-4">
                 {project.repos && project.repos.length > 0 && (
                     project.repos.length === 1 ? (
-                        <Link href={project.repos[0]} target="_blank">
-                            <FontAwesomeIcon icon={faCode} className="mr-2 h-4 w-4" />
-                            {text.projects.actions.repos.mono}
-                        </Link>
-                    ) : (
-                        <>
+                        <Button variant="ghost" asChild>
                             <Link href={project.repos[0]} target="_blank">
                                 <FontAwesomeIcon icon={faCode} className="mr-2 h-4 w-4" />
-                                {text.projects.actions.repos.frontend}
+                                {text.projects.actions.repos.mono}
                             </Link>
-                            <Link href={project.repos[1]} target="_blank">
-                                <FontAwesomeIcon icon={faCode} className="mr-2 h-4 w-4" />
-                                {text.projects.actions.repos.backend}
-                            </Link>
+                        </Button>
+                    ) : (
+                        <>
+                            <Button variant="ghost" asChild>
+                                <Link href={project.repos[0]} target="_blank">
+                                    <FontAwesomeIcon icon={faCode} className="mr-2 h-4 w-4" />
+                                    {text.projects.actions.repos.frontend}
+                                </Link>
+                            </Button>
+                            <Button variant="ghost" asChild>
+                                <Link href={project.repos[1]} target="_blank">
+                                    <FontAwesomeIcon icon={faCode} className="mr-2 h-4 w-4" />
+                                    {text.projects.actions.repos.backend}
+                                </Link>
+                            </Button>
                         </>
                     )
                 )}
                 {project.demo && (
-                    <Link href={project.demo} target="_blank">
-                        <ExternalLink className="mr-2 h-4 w-4" />
-                        {text.projects.actions.demo}
-                    </Link>
+                    <Button variant="default" asChild>
+                        <Link href={project.demo} target="_blank">
+                            <ExternalLink className="mr-2 h-4 w-4" />
+                            {text.projects.actions.demo}
+                        </Link>
+                    </Button>
                 )}
             </div>
         </main>
