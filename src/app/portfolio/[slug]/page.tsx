@@ -40,7 +40,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
         <main className="container mx-auto px-4 py-12 max-w-5xl">
             {/* En-tête */}
             <div className="text-center mb-12">
-                <h1 className="text-4xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+                <h1 className="text-4xl font-bold bg-linear-to-r from-primary to-primary/60 bg-clip-text text-transparent">
                     {project.title}
                 </h1>
                 <div className="flex flex-wrap items-center gap-4 mt-2 text-muted-foreground justify-center w-full">
@@ -130,36 +130,28 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
             <div className="flex flex-wrap gap-4">
                 {project.repos && project.repos.length > 0 && (
                     project.repos.length === 1 ? (
-                        <Button variant="ghost" asChild>
-                            <Link href={project.repos[0]} target="_blank">
-                                <FontAwesomeIcon icon={faCode} className="mr-2 h-4 w-4" />
-                                {text.projects.actions.repos.mono}
-                            </Link>
-                        </Button>
+                        <Link href={project.repos[0]} target="_blank" className="flex justify-center items-center border rounded-lg p-2">
+                            <FontAwesomeIcon icon={faCode} className="mr-2 h-4 w-4" />
+                            {text.projects.actions.repos.mono}
+                        </Link>
                     ) : (
                         <>
-                            <Button variant="ghost" asChild>
-                                <Link href={project.repos[0]} target="_blank">
-                                    <FontAwesomeIcon icon={faCode} className="mr-2 h-4 w-4" />
-                                    {text.projects.actions.repos.frontend}
-                                </Link>
-                            </Button>
-                            <Button variant="ghost" asChild>
-                                <Link href={project.repos[1]} target="_blank">
-                                    <FontAwesomeIcon icon={faCode} className="mr-2 h-4 w-4" />
-                                    {text.projects.actions.repos.backend}
-                                </Link>
-                            </Button>
+                            <Link href={project.repos[0]} target="_blank" className="flex justify-center items-center border rounded-lg p-2">
+                                <FontAwesomeIcon icon={faCode} className="mr-2 h-4 w-4" />
+                                {text.projects.actions.repos.frontend}
+                            </Link>
+                            <Link href={project.repos[1]} target="_blank" className="flex justify-center items-center border rounded-lg p-2">
+                                <FontAwesomeIcon icon={faCode} className="mr-2 h-4 w-4" />
+                                {text.projects.actions.repos.backend}
+                            </Link>
                         </>
                     )
                 )}
                 {project.demo && (
-                    <Button variant="default" asChild>
-                        <Link href={project.demo} target="_blank">
-                            <ExternalLink className="mr-2 h-4 w-4" />
-                            {text.projects.actions.demo}
-                        </Link>
-                    </Button>
+                    <Link href={project.demo} target="_blank" className="flex justify-center items-center border rounded-lg p-2  bg-blue-400">
+                        <ExternalLink className="mr-2 h-4 w-4" />
+                        {text.projects.actions.demo}
+                    </Link>
                 )}
             </div>
         </main>
