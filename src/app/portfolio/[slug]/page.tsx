@@ -72,6 +72,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
             <Button
                 variant={"default"}
                 className="mb-2 w-36"
+                asChild
             >
                 <Link href="/portfolio">
                     <ArrowLeft />{text.projects.actions.back}
@@ -129,36 +130,30 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
             <div className="flex flex-wrap gap-4">
                 {project.repos && project.repos.length > 0 && (
                     project.repos.length === 1 ? (
-                        <Button>
                             <Link href={project.repos[0]} target="_blank" rel="noopener noreferrer">
                                 <FontAwesomeIcon icon={faCode} className="mr-2 h-4 w-4" />
                                 {text.projects.actions.repos.mono}
                             </Link>
-                        </Button>
                     ) : (
                         <>
-                            <Button variant="outline">
+                            <Button asChild variant="outline">
                                 <Link href={project.repos[0]} target="_blank" rel="noopener noreferrer">
                                     <FontAwesomeIcon icon={faCode} className="mr-2 h-4 w-4" />
                                     {text.projects.actions.repos.frontend}
                                 </Link>
                             </Button>
-                            <Button variant="outline">
                                 <Link href={project.repos[1]} target="_blank" rel="noopener noreferrer">
                                     <FontAwesomeIcon icon={faCode} className="mr-2 h-4 w-4" />
                                     {text.projects.actions.repos.backend}
                                 </Link>
-                            </Button>
                         </>
                     )
                 )}
                 {project.demo && (
-                    <Button>
                         <Link href={project.demo} target="_blank">
                             <ExternalLink className="mr-2 h-4 w-4" />
                             {text.projects.actions.demo}
                         </Link>
-                    </Button>
                 )}
             </div>
         </main>
