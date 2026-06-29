@@ -130,28 +130,36 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
             <div className="flex flex-wrap gap-4">
                 {project.repos && project.repos.length > 0 && (
                     project.repos.length === 1 ? (
-                        <a href={project.repos[0]} target="_blank" rel="noopener noreferrer" className="flex justify-center items-center border rounded-lg p-2">
-                            <FontAwesomeIcon icon={faCode} className="mr-2 h-4 w-4" />
-                            {text.projects.actions.repos.mono}
-                        </a>
-                    ) : (
-                        <>
+                        <Button variant={"ghost"} asChild>
                             <a href={project.repos[0]} target="_blank" rel="noopener noreferrer" className="flex justify-center items-center border rounded-lg p-2">
                                 <FontAwesomeIcon icon={faCode} className="mr-2 h-4 w-4" />
-                                {text.projects.actions.repos.frontend}
+                                {text.projects.actions.repos.mono}
                             </a>
-                            <a href={project.repos[1]} target="_blank" rel="noopener noreferrer" className="flex justify-center items-center border rounded-lg p-2">
-                                <FontAwesomeIcon icon={faCode} className="mr-2 h-4 w-4" />
-                                {text.projects.actions.repos.backend}
-                            </a>
+                        </Button>
+                    ) : (
+                        <>
+                            <Button variant={"ghost"} asChild>
+                                <a href={project.repos[0]} target="_blank" rel="noopener noreferrer">
+                                    <FontAwesomeIcon icon={faCode} className="mr-2 h-4 w-4" />
+                                    {text.projects.actions.repos.frontend}
+                                </a>
+                            </Button>
+                            <Button variant="ghost" asChild>
+                                <a href={project.repos[1]} target="_blank" rel="noopener noreferrer">
+                                    <FontAwesomeIcon icon={faCode} className="mr-2 h-4 w-4" />
+                                    {text.projects.actions.repos.backend}
+                                </a>
+                            </Button>
                         </>
                     )
                 )}
                 {project.demo && (
-                    <a href={project.demo} target="_blank" rel="noopener noreferrer" className="flex justify-center items-center border rounded-lg p-2  bg-blue-400">
-                        <ExternalLink className="mr-2 h-4 w-4" />
-                        {text.projects.actions.demo}
-                    </a>
+                    <Button variant="default" asChild>
+                        <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                            <ExternalLink className="mr-2 h-4 w-4" />
+                            {text.projects.actions.demo}
+                        </a>
+                    </Button>
                 )}
             </div>
         </main>
