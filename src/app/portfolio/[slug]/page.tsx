@@ -72,13 +72,11 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
             <Button
                 variant={"default"}
                 className="mb-2 w-36"
-                onClick={
-                    () => {
-                        window.history.back();
-                    }
-                }
+                asChild
             >
-                <ArrowLeft />{text.projects.actions.back}
+                <Link href="/portfolio">
+                    <ArrowLeft />{text.projects.actions.back}
+                </Link>
             </Button>
 
             {/* Slider d'images */}
