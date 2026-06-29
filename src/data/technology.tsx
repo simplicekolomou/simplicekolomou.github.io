@@ -8,7 +8,7 @@ import {
     TypescriptIconRound, Zod, _React, Mysql, Kotlin, Android,
     Dotnet, Postgresql, Nextjs,
     Php, Laravel, Maven,
-    Tailwind,
+    Tailwind, Docker
 } from "@dev.icons/react";
 import { Section } from "./section";
 
