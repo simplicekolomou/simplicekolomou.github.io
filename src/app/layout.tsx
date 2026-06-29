@@ -14,11 +14,7 @@ export const metadata: Metadata = {
         apple: "/images/profile/apple-touch-icon.png",
     },
 };
-export default function RootLayout({
-                                     children,
-                                   }: Readonly<{
-  children: ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: ReactNode}>) {
   return (
       <html lang="fr" suppressHydrationWarning>
       <body className="min-h-screen flex flex-col">
