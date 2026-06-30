@@ -260,7 +260,6 @@ const myProjects: Project[] = [
             "https://github.com/simplicekolomou/mma-client",
             "https://github.com/simplicekolomou/mma.admin"
         ],
-        demo: "#",
         type: "personal",
         image: "/images/mma/mma-presentation.png",
         images: [
@@ -337,7 +336,6 @@ const myProjects: Project[] = [
         slug: "gestion-repas",
         date: "2025-06",
         repos: ["https://github.com/simplicekolomou/gestion-repas"],
-        demo: "#",
         type: "personal",
         image: "/images/gestRepas/gestion-repas-presentation.png",
         images: [
@@ -423,7 +421,6 @@ const myProjects: Project[] = [
         slug: "puroguramu",
         date: "2024-08",
         repos: ["https://github.com/simplicekolomou/puroguramu"],
-        demo: "https://www.loom.com/share/pert-demo",
         type: "team",
         team: ["Eléonore"],
         image: "/images/puroguramu/puroguramu-presentation.png",
