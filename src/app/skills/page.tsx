@@ -25,7 +25,7 @@ export default function SkillsPage() {
     }, {} as Record<string, typeof skills>);
 
     return (
-        <main className="container mx-auto px-4 py-12 max-w-5xl">
+        <main className="container mx-auto px-4 py-12 max-w-7xl">
 
             {/* Header */}
             <div className="text-center mb-12">
@@ -39,7 +39,7 @@ export default function SkillsPage() {
             </div>
 
             {/* Sections */}
-            <div className="space-y-10">
+            <div className="space-y-1">
                 {Object.entries(skillsByCategory).map(([category, items]) => (
                     <section key={category} className="p-6 rounded-xl border bg-card">
 

@@ -8,7 +8,7 @@ import {text} from "@/data/contentText";
 
 export default function Contacts() {
     return (
-        <main className="container mx-auto px-4 py-12 max-w-4xl">
+        <main className="container mx-auto px-4 py-12 max-w-7xl">
             {/* En-tête */}
             <div className="text-center mb-12">
                 <h1 className="text-4xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
