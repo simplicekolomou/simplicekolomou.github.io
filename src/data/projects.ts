@@ -143,7 +143,7 @@ const myProjects: Project[] = [
             "https://github.com/simplicekolomou/bookexchange-front",
             "https://github.com/simplicekolomou/bookexchange-api"
         ],
-        demo: "https://www.loom.com/share/pert-demo",
+        demo: "https://bookexchange-front.vercel.app/",
         type: "team",
         team: ["Mathieu", "Théo"],
         image: "/images/bookexchange/bookexchange-presentation.png",
