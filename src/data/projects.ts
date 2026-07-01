@@ -576,6 +576,7 @@ const myProjects: Project[] = [
             "react",
             "typescript",
             "rtk-query",
+            "rtk",
             "hibernate",
             "nextjs",
             "postgresql",

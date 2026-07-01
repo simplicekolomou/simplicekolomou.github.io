@@ -8,7 +8,7 @@ import {
     TypescriptIconRound, Zod, _React, Mysql, Kotlin, Android,
     Dotnet, Postgresql, Nextjs,
     Php, Laravel, Maven,
-    Tailwind, Docker
+    Tailwind,
 } from "@dev.icons/react";
 import { Section } from "./section";
 
@@ -60,6 +60,7 @@ export const technologies: Technology[] = [
     { id: "sql-server", name: "SQL Server", section: Section["ECOSYSTEME_COMPLEMENTAIRE"], icon: null },
     { id: "zod", name: "Zod", section: Section["ECOSYSTEME_COMPLEMENTAIRE"], icon: <Zod size={15} /> },
     { id: "rtk-query", name: "RTK Query", section: Section["ECOSYSTEME_COMPLEMENTAIRE"], icon: <Redux size={15} /> },
+    { id: "rtk", name: "RTK", section: Section["ECOSYSTEME_COMPLEMENTAIRE"], icon: <Redux size={15} /> },
     { id: "react-hook-form", name: "React Hook Form", section: Section["ECOSYSTEME_COMPLEMENTAIRE"], icon: null },
     { id: "razor-pages", name: "Razor Pages", section: Section["ECOSYSTEME_COMPLEMENTAIRE"], icon: null },
     { id: "avalonia", name: "Avalonia UI", section: Section["ECOSYSTEME_COMPLEMENTAIRE"], icon: <CSharp size={15} /> },

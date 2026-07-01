@@ -1,9 +1,10 @@
 import "@/globals.css";
-import React, { ReactNode } from "react";
+import React, {ReactNode} from "react";
 import NavBar from "@/components/navBar/NavBar";
 import ThemeProvider from "@/components/theme/ThemeProvider";
 import Footer from "@/components/footer/Footer";
-import type { Metadata } from "next";
+import type {Metadata} from "next";
+import ClarityProvider from "@/components/analytics/Clarity";
 
 export const metadata: Metadata = {
     title: "Simplice Kolomou",
@@ -14,18 +15,19 @@ export const metadata: Metadata = {
         apple: "/images/profile/apple-touch-icon.png",
     },
 };
-export default function RootLayout({ children }: Readonly<{ children: ReactNode}>) {
-  return (
-      <html lang="fr" suppressHydrationWarning>
-      <body className="min-h-screen flex flex-col">
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <NavBar />
+export default function RootLayout({children}: Readonly<{ children: ReactNode }>) {
+    return (
+        <html lang="fr" suppressHydrationWarning>
+        <body className="min-h-screen flex flex-col">
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+            <ClarityProvider />
+            <NavBar/>
             <main className="flex-1">
                 {children}
             </main>
-            <Footer />
-          </ThemeProvider>
-      </body>
-      </html>
-  );
+            <Footer/>
+        </ThemeProvider>
+        </body>
+        </html>
+    );
 }
