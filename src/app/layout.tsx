@@ -18,6 +18,7 @@ export const metadata: Metadata = {
 };
 export default function RootLayout({children}: Readonly<{ children: ReactNode }>) {
     const gaId = process.env.NEXT_PUBLIC_GA_ID;
+    console.log("GAID : ", gaId);
     return (
         <html lang="fr" suppressHydrationWarning>
         <body className="min-h-screen flex flex-col">

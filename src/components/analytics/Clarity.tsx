@@ -11,6 +11,5 @@ export default function ClarityProvider() {
         if(!projectId) return
         Clarity.init(projectId);
     }, []);
-
     return null;
 }
