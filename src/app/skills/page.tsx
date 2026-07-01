@@ -2,34 +2,36 @@ import {skills} from "@/data/skills";
 import {Code2, Database, Layout, Server, Sparkles} from "lucide-react";
 import {JSX} from "react";
 import {text} from "@/data/contentText";
+import {WebdevIcon} from "@dev.icons/react";
 
 const categoryIcon: Record<string, JSX.Element> = {
     Frontend: <Layout className="w-5 h-5"/>,
     Backend: <Server className="w-5 h-5"/>,
-    Database: <Database className="w-5 h-5"/>,
+    "Base de données": <Database className="w-5 h-5"/>,
     "DevOps & Outils": <Code2 className="w-5 h-5"/>,
-    Autre: <Sparkles className="w-5 h-5"/>,
+    "Framework & Librairies": <WebdevIcon className="w-5 h-5"/>,
+    Autres: <Sparkles className="w-5 h-5"/>
 };
 
 export default function SkillsPage() {
     /**
-     * Récupère les compétences et les organise par catégorie. Si une compétence n'a pas de catégorie, elle est placée dans "Autre".
+     * Récupère les compétences et les organise par catégorie. Si une compétence n'a pas de catégorie, elle est placée dans "Autres".
      * @return Un objet où les clés sont les catégories et les valeurs sont des tableaux de compétences appartenant à ces catégories.
      * Note: Cette organisation facilite l'affichage des compétences par section dans le composant React.
      */
     const skillsByCategory = skills.reduce((acc, skill) => {
-        const cat = skill.category || "Autre";
+        const cat = skill.category || "Autres";
         if (!acc[cat]) acc[cat] = [];
         acc[cat].push(skill);
         return acc;
     }, {} as Record<string, typeof skills>);
 
     return (
-        <main className="container mx-auto px-4 py-12 max-w-7xl">
+        <main className="container mx-auto px-4 py-12 max-w-6xl">
 
             {/* Header */}
             <div className="text-center mb-12">
-                <h1 className="text-4xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+                <h1 className="text-4xl font-bold bg-linear-to-r from-primary to-primary/60 bg-clip-text text-transparent">
                     {text.skills.title}
                 </h1>
                 <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">
@@ -52,11 +54,11 @@ export default function SkillsPage() {
                         </div>
 
                         {/* Skills list */}
-                        <div className="space-y-3">
+                        <div className="space-y-2">
                             {items.map((skill) => (
                                 <div
                                     key={skill.id}
-                                    className="flex flex-col md:flex-row md:items-center justify-between gap-1 border-b pb-3 last:border-none"
+                                    className="flex flex-col md:flex-row md:items-center justify-between gap-1 border-b pb-2 last:border-none"
                                 >
                                     <span className="font-medium">
                                         {skill.name}

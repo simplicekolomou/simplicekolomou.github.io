@@ -25,7 +25,6 @@ export interface Skill {
     id: string;
     name: string;
     type: SkillType;
-
     category?: string;
     context?: string;
 }
@@ -49,26 +48,35 @@ export const skills: Skill[] = [
     // Frontend (Technical)
     { id: "ts", name: "TypeScript", type: SkillType.Technical, category: "Frontend", context: "Développement frontend typé · applications React/Next.js" },
     { id: "react", name: "React", type: SkillType.Technical, category: "Frontend", context: "SPA · hooks · state management (RTK Query) · Form" },
-    { id: "nextjs", name: "Next.js", type: SkillType.Technical, category: "Frontend", context: "Applications React · rendu SSR/SSG/CSR · Dashboards" },
-    { id: "shadcn", name: "Shadcn UI", type: SkillType.Technical, category: "Frontend", context: "Composants UI React réutilisables" },
-    { id: "chakra-ui", name: "Chakra UI", type: SkillType.Technical, category: "Frontend", context: "Composants UI React · design system · Accessibilité · Responsibilité" },
-    { id: "tailwind", name: "Tailwind CSS", type: SkillType.Technical, category: "Frontend", context: "Stylisation d’interfaces modernes · design responsive" },
+    { id: "js", name: "JavaScript", type: SkillType.Technical, category: "Frontend", context: "Développement frontend · applications web interactives" },
+
+
+    // Framework & bibliothèques
+    { id: "nextjs", name: "Next.js", type: SkillType.Technical, category: "Framework & Librairies", context: "Applications React · rendu SSR/SSG/CSR · Dashboards" },
+    { id: "shadcn", name: "Shadcn UI", type: SkillType.Technical, category: "Framework & Librairies", context: "Composants UI React réutilisables" },
+    { id: "chakra-ui", name: "Chakra UI", type: SkillType.Technical, category: "Framework & Librairies", context: "Composants UI React · design system · Accessibilité · Responsibilité" },
+    { id: "tailwind", name: "Tailwind CSS", type: SkillType.Technical, category: "Framework & Librairies", context: "Stylisation d’interfaces modernes · design responsive" },
+    {id: "springboot", name: "Spring Boot", type: SkillType.Technical, category: "Framework & Librairies", context: "Développement backend Java · applications REST et microservices" },
+    {id: "laravel", name: "Laravel", type: SkillType.Technical, category: "Framework & Librairies", context: "Framework PHP · développement d'applications web et API REST" },
+    {id: "next", name: "Next.js", type: SkillType.Technical, category: "Framework & Librairies", context: "Framework React · rendu SSR/SSG/CSR · Dashboards" },
+    {id: "reacthookform", name: "React Hook Form", type: SkillType.Technical, category: "Framework & Librairies", context: "Gestion de formulaires React · validation et soumission" },
+    {id: "zod", name: "Zod", type: SkillType.Technical, category: "Framework & Librairies", context: "Validation de schémas TypeScript · intégration avec React Hook Form" },
 
     // Base de données (Technical)
-    { id: "mysql", name: "MySQL", type: SkillType.Technical, category: "Database", context: "Bases de données relationnelles · applications web et projets académiques" },
-    { id: "pgsql", name: "PostgreSQL", type: SkillType.Technical, category: "Database", context: "Bases de données relationnelles avancées · API backend et applications full-stack" },
-    { id: "sqlserver", name: "SQL Server", type: SkillType.Technical, category: "Database", context: "Bases de données relationnelles · applications .NET et projets académiques" },
-    { id: "oracle", name: "Oracle SQL", type: SkillType.Technical, category: "Database", context: "Bases de données relationnelles · environnement académique et exercices SQL" },
+    { id: "mysql", name: "MySQL", type: SkillType.Technical, category: "Base de données", context: "Bases de données relationnelles · applications web et projets académiques" },
+    { id: "pgsql", name: "PostgreSQL", type: SkillType.Technical, category: "Base de données", context: "Bases de données relationnelles avancées · API backend et applications full-stack" },
+    { id: "sqlserver", name: "SQL Server", type: SkillType.Technical, category: "Base de données", context: "Bases de données relationnelles · applications .NET et projets académiques" },
+    { id: "oracle", name: "Oracle SQL", type: SkillType.Technical, category: "Base de données", context: "Bases de données relationnelles · environnement académique et exercices SQL" },
 
     // Outils (Tool)
     { id: "git", name: "Git", type: SkillType.Tool, category: "Outils", context: "Gestion de versions · collaboration en équipe via GitHub/GitLab" },
-    {id: "maven", name: "Maven", type: SkillType.Tool, category: "Outils", context: "Gestion de dépendances et build Java · projets académiques et Spring" },
+    {id: "maven", name: "Maven", type: SkillType.Tool, category: "Outils", context: "Gestion de dépendances et build Java · projets académiques et Spring Boot" },
     { id: "gradle", name: "Gradle", type: SkillType.Tool, category: "Outils", context: "Automatisation de build · projets Java/Kotlin (Android, Spring Boot)" },
 
     // IDE (Tool)
-    { id: "intellij", name: "IntelliJ IDEA", type: SkillType.Tool, category: "IDE", context: "Java/Kotlin" },
-    { id: "phpstorm", name: "PhpStorm", type: SkillType.Tool, category: "IDE", context: "PHP/Laravel, React" },
-    { id: "rider", name: "Rider", type: SkillType.Tool, category: "IDE", context: "C#/.NET" },
-    { id: "vscode", name: "VS Code", type: SkillType.Tool, category: "IDE", context: "JavaScript/TypeScript, React, Next.js" },
-    { id: "eclipse", name: "Eclipse", type: SkillType.Tool, category: "IDE", context: "Java" },
+    { id: "intellij", name: "IntelliJ IDEA", type: SkillType.Tool, category: "IDEs", context: "Java/Kotlin" },
+    { id: "phpstorm", name: "PhpStorm", type: SkillType.Tool, category: "IDEs", context: "PHP/Laravel, React" },
+    { id: "rider", name: "Rider", type: SkillType.Tool, category: "IDEs", context: "C#/.NET" },
+    { id: "vscode", name: "VS Code", type: SkillType.Tool, category: "IDEs", context: "JavaScript/TypeScript, React, Next.js" },
+    { id: "eclipse", name: "Eclipse", type: SkillType.Tool, category: "IDEs", context: "Java" },
 ];

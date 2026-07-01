@@ -29,9 +29,9 @@ export default function HomePage() {
         return acc;
     }, {} as Record<Section, typeof technologies>);
     return (
-        <Card className="w-full max-w-7xl mx-auto my-12 overflow-hidden border-0 shadow-2xl bg-gradient-to-br from-background via-background to-muted/20 rounded-3xl transition-all duration-300 hover:shadow-2xl">
+        <Card className="w-full max-w-6xl mx-auto my-12 overflow-hidden border-0 shadow-2xl bg-linear-to-br from-background via-background to-muted/20 rounded-3xl transition-all duration-300 hover:shadow-2xl">
             {/* Bandeau décoratif avec dégradé animé */}
-            <div className="relative h-32 bg-gradient-to-r from-primary/40 via-primary/20 to-transparent overflow-hidden">
+            <div className="relative h-32 bg-linear-to-r from-primary/40 via-primary/20 to-transparent overflow-hidden">
                 <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg...')] opacity-10" />
             </div>
 
@@ -39,12 +39,12 @@ export default function HomePage() {
                 <div className="flex flex-col sm:flex-row items-center sm:items-end gap-4 -mt-12 sm:-mt-10 mb-2">
                     <Avatar className="w-28 h-28 border-4 border-background shadow-xl ring-2 ring-primary/20">
                         <AvatarImage src="/images/profile/photo-profil.jpg" alt="Photo de profil" />
-                        <AvatarFallback className="bg-gradient-to-br from-primary/20 to-primary/5 text-primary text-2xl font-bold">
+                        <AvatarFallback className="bg-linear-to-br from-primary/20 to-primary/5 text-primary text-2xl font-bold">
                             SK
                         </AvatarFallback>
                     </Avatar>
                     <div className="text-center sm:text-left flex-1">
-                        <CardTitle className="text-3xl sm:text-4xl font-bold tracking-tight bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+                        <CardTitle className="text-3xl sm:text-4xl font-bold tracking-tight bg-linear-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
                             {text.home.myName}
                         </CardTitle>
                         <div className="flex flex-wrap justify-center sm:justify-start items-center gap-x-4 gap-y-1 mt-2 text-muted-foreground">
@@ -144,7 +144,7 @@ export default function HomePage() {
                 </div>
 
                 {/* Section citation + appel à l'action */}
-                <div className="relative mt-4 rounded-2xl bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5 p-6 text-center overflow-hidden">
+                <div className="relative mt-4 rounded-2xl bg-linear-to-r from-primary/5 via-primary/10 to-primary/5 p-6 text-center overflow-hidden">
                     <Sparkles className="absolute top-2 right-2 w-6 h-6 text-primary/20" />
                     <p className="italic text-muted-foreground text-base leading-relaxed">
                         {text.home.citation}
