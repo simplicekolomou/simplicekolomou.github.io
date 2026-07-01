@@ -1,10 +1,11 @@
 import { MapPin } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faLinkedin, faSquareFacebook, faSquareGithub} from "@fortawesome/free-brands-svg-icons";
+import {faLinkedin, faSquareGithub} from "@fortawesome/free-brands-svg-icons";
 import {faEnvelope, faPhone} from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import {text} from "@/data/contentText";
+import {trackEvent} from "@/lib/analytics/google-analytics";
 
 export default function Contacts() {
     return (
@@ -48,6 +49,11 @@ export default function Contacts() {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-muted-foreground hover:text-primary transition-colors"
+                        onClick={() =>
+                            trackEvent("click_linkedin", {
+                                destination: "linkedin",
+                            })
+                        }
                     >
                         <CardHeader className="flex flex-row items-center gap-4 pb-2">
                             <FontAwesomeIcon icon={faLinkedin} className="h-8 w-8 text-primary" />
@@ -69,6 +75,11 @@ export default function Contacts() {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-muted-foreground hover:text-primary transition-colors"
+                        onClick={() =>
+                            trackEvent("click_github", {
+                                destination: "github",
+                            })
+                        }
                     >
                         <CardHeader className="flex flex-row items-center gap-4 pb-2">
                             <FontAwesomeIcon icon={faSquareGithub} className="h-8 w-8 text-primary" />

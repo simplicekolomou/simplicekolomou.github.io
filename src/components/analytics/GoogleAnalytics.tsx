@@ -4,7 +4,6 @@ import Script from "next/script";
 
 export default function GoogleAnalyticProvider() {
     const gaId = process.env.NEXT_PUBLIC_GA_ID;
-    console.log("GAID : ", gaId);
     if (!gaId) {
         console.warn("Google Analytics ID is not defined in environment variables.");
         return null;

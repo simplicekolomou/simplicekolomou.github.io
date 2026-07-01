@@ -5,7 +5,7 @@ import ThemeProvider from "@/components/theme/ThemeProvider";
 import Footer from "@/components/footer/Footer";
 import type {Metadata} from "next";
 import ClarityProvider from "@/components/analytics/Clarity";
-import GoogleAnalyticProvider from "@/components/analytics/GoogleAnalytic";
+import GoogleAnalyticProvider from "@/components/analytics/GoogleAnalytics";
 
 export const metadata: Metadata = {
     title: "Simplice Kolomou",
