@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     icons: {
         icon: "/images/profile/favicon.ico",
         shortcut: "/images/profile/favicon-32x32.png",
-        apple: "/images/profile/apple-touch-icon.png",
+        apple: "/images/profile/favicon-16x16.png",
     },
 };
 export default function RootLayout({children}: Readonly<{ children: ReactNode }>) {
