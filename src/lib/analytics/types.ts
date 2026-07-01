@@ -1,0 +1,1 @@
+export type AnalyticsParams = Record<string, string | number | boolean>;

@@ -6,9 +6,11 @@ import {faLinkedin, faSquareGithub} from "@fortawesome/free-brands-svg-icons";
 import {faEnvelope, faPhone} from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import {text} from "@/data/contentText";
-import {trackEvent} from "@/lib/analytics/google-analytics";
+import {useAnalytics} from "@/hooks/useAnalytics";
+import {AnalyticsEvent} from "@/lib/analytics/events";
 
 export default function Contacts() {
+    const track = useAnalytics().track;
     return (
         <main className="container mx-auto px-4 py-12 max-w-6xl">
             {/* En-tête */}
@@ -51,9 +53,7 @@ export default function Contacts() {
                         rel="noopener noreferrer"
                         className="text-muted-foreground hover:text-primary transition-colors"
                         onClick={() =>
-                            trackEvent("click_linkedin", {
-                                destination: "linkedin",
-                            })
+                            track(AnalyticsEvent.CLICK_LINKEDIN)
                         }
                     >
                         <CardHeader className="flex flex-row items-center gap-4 pb-2">
@@ -77,9 +77,7 @@ export default function Contacts() {
                         rel="noopener noreferrer"
                         className="text-muted-foreground hover:text-primary transition-colors"
                         onClick={() =>
-                            trackEvent("click_github", {
-                                destination: "github",
-                            })
+                            track(AnalyticsEvent.CLICK_GITHUB)
                         }
                     >
                         <CardHeader className="flex flex-row items-center gap-4 pb-2">

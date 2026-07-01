@@ -1,3 +1,4 @@
+'use client'
 import Image from "next/image";
 import Link from "next/link";
 import { projects } from "@/data/projects";
@@ -13,8 +14,11 @@ import {
 } from "@/components/ui/card";
 import { technologies, type Technology } from "@/data/technology";
 import {text} from "@/data/contentText";
+import {useAnalytics} from "@/hooks/useAnalytics";
+import {AnalyticsEvent} from "@/lib/analytics/events";
 
 export default function PortfolioPage() {
+    const track = useAnalytics().track;
     // Fonction utilitaire pour résoudre les IDs en objets Technology
     const resolveTechs = (ids: string[]): Technology[] => {
         if (!ids || !Array.isArray(ids)) return [];
@@ -63,6 +67,7 @@ export default function PortfolioPage() {
                                         <Link
                                             href={`/portfolio/${project.slug}`}
                                             className="block relative h-48 w-full overflow-hidden bg-muted"
+                                            onClick={()=>track(AnalyticsEvent.OPEN_PROJECT)}
                                         >
                                             <Image
                                                 src={project.image}
@@ -92,7 +97,7 @@ export default function PortfolioPage() {
                                     </CardDescription>
                                 </CardHeader>
 
-                                <CardContent className="flex-grow space-y-3">
+                                <CardContent className="grow space-y-3">
                                     {/* Technologies utilisées avec icônes */}
                                     {projectTechs.length > 0 && (
                                         <div className="flex flex-wrap gap-2">
