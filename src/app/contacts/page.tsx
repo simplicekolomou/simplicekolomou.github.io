@@ -1,3 +1,4 @@
+'use client'
 import { MapPin } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
