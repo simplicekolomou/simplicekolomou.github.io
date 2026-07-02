@@ -598,7 +598,8 @@ const myProjects: Project[] = [
             "/images/ticketing/ticketing-notifications.png",
             "/images/ticketing/ticketing-support.png",
             "/images/ticketing/ticketing-team.png",
-            "/images/ticketing/ticketing-presentation.png"
+            "/images/ticketing/ticketing-presentation.png",
+            "/images/ticketing/ticketing-monitoring.png"
         ]
     }
 ];
