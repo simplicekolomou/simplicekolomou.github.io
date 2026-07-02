@@ -56,6 +56,7 @@ export const text = {
             demo: "Démo",
             code: "Code source",
             back: "Retour aux projets",
+            details: "Voir les détails du projet",
 
             repos: {
                 frontend: "Dépôt github Frontend",
@@ -147,8 +148,9 @@ export const text = {
         me: "Simplice Kolomou",
 
         aboutMe: `
-            Développeur full-stack passionné par la création d’applications modernes,
-            performantes et accessibles.
+            Développeur full-stack passionné, impliqué dans la conception et le développement d’applications modernes, 
+            robustes et accessibles. J’interviens sur l’ensemble du cycle produit, de la conception frontend et backend 
+            jusqu’à l’implémentation, en privilégiant des architectures propres, maintenables et orientées performance.
         `,
 
         followMe: "Retrouvez-moi",

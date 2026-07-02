@@ -16,6 +16,7 @@ import { technologies, type Technology } from "@/data/technology";
 import {text} from "@/data/contentText";
 import {useAnalytics} from "@/hooks/useAnalytics";
 import {AnalyticsEvent} from "@/lib/analytics/events";
+import {Button} from "@/components/ui/button";
 
 export default function PortfolioPage() {
     const track = useAnalytics().track;
@@ -144,6 +145,14 @@ export default function PortfolioPage() {
                                             </span>
                                         )}
                                     </div>
+                                    <Button variant="default" asChild >
+                                        <Link
+                                            href={`/portfolio/${project.slug}`}
+                                            onClick={()=>track(AnalyticsEvent.OPEN_PROJECT)}
+                                        >
+                                            {text.projects.actions.details}
+                                        </Link>
+                                    </Button>
                                 </CardFooter>
                             </Card>
                         );
