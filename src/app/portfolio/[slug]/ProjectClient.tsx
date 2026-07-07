@@ -24,6 +24,10 @@ export default function ProjectClient({ project }: { project: Project }) {
             .filter((t): t is Technology => t !== undefined);
     }
 
+    function ensureAbsoluteUrl(url: string): string {
+        return /^https?:\/\//i.test(url) ? url : `https://${url}`;
+    }
+
     return (
         <main className="container mx-auto px-4 py-12 max-w-6xl">
             {/* En-tête */}
@@ -119,7 +123,11 @@ export default function ProjectClient({ project }: { project: Project }) {
                 {project.repos && project.repos.length > 0 && (
                     project.repos.length === 1 ? (
                         <Button variant={"ghost"} asChild>
-                            <a href={project.repos[0]} target="_blank" rel="noopener noreferrer" className="flex justify-center items-center border rounded-lg p-2">
+                            <a href={ensureAbsoluteUrl(project.repos[0])}
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               className="flex justify-center items-center border rounded-lg p-2"
+                            >
                                 <FontAwesomeIcon icon={faCode} className="mr-2 h-4 w-4" />
                                 {text.projects.actions.repos.mono}
                             </a>
@@ -130,7 +138,7 @@ export default function ProjectClient({ project }: { project: Project }) {
                                 variant={"ghost"}
                                 asChild
                             >
-                                <a href={project.repos[0]}
+                                <a href={ensureAbsoluteUrl(project.repos[0])}
                                    target="_blank"
                                    rel="noopener noreferrer"
                                    onClick={()=>track(AnalyticsEvent.OPEN_REPOS) }
@@ -143,7 +151,7 @@ export default function ProjectClient({ project }: { project: Project }) {
                                 variant="ghost"
                                 asChild
                             >
-                                <a href={project.repos[1]}
+                                <a href={ensureAbsoluteUrl(project.repos[1])}
                                    target="_blank"
                                    rel="noopener noreferrer"
                                    onClick={()=>track(AnalyticsEvent.OPEN_REPOS) }
@@ -160,7 +168,7 @@ export default function ProjectClient({ project }: { project: Project }) {
                         variant="default"
                         asChild
                     >
-                        <a href={project.demo}
+                        <a href={ensureAbsoluteUrl(project.demo)}
                            target="_blank"
                            rel="noopener noreferrer"
                            onClick={()=> track(AnalyticsEvent.OPEN_DEMO) }
