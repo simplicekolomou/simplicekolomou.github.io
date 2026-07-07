@@ -129,9 +129,12 @@ export default function ProjectClient({ project }: { project: Project }) {
                             <Button
                                 variant={"ghost"}
                                 asChild
-                                onClick={()=>track(AnalyticsEvent.OPEN_REPOS) }
                             >
-                                <a href={project.repos[0]} target="_blank" rel="noopener noreferrer">
+                                <a href={project.repos[0]}
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   onClick={()=>track(AnalyticsEvent.OPEN_REPOS) }
+                                >
                                     <FontAwesomeIcon icon={faCode} className="mr-2 h-4 w-4" />
                                     {text.projects.actions.repos.frontend}
                                 </a>
@@ -139,9 +142,12 @@ export default function ProjectClient({ project }: { project: Project }) {
                             <Button
                                 variant="ghost"
                                 asChild
-                                onClick={()=>track(AnalyticsEvent.OPEN_REPOS) }
                             >
-                                <a href={project.repos[1]} target="_blank" rel="noopener noreferrer">
+                                <a href={project.repos[1]}
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   onClick={()=>track(AnalyticsEvent.OPEN_REPOS) }
+                                >
                                     <FontAwesomeIcon icon={faCode} className="mr-2 h-4 w-4" />
                                     {text.projects.actions.repos.backend}
                                 </a>
@@ -153,9 +159,12 @@ export default function ProjectClient({ project }: { project: Project }) {
                     <Button
                         variant="default"
                         asChild
-                        onClick={()=> track(AnalyticsEvent.OPEN_DEMO) }
                     >
-                        <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                        <a href={project.demo}
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           onClick={()=> track(AnalyticsEvent.OPEN_DEMO) }
+                        >
                             <ExternalLink className="mr-2 h-4 w-4" />
                             {text.projects.actions.demo}
                         </a>
